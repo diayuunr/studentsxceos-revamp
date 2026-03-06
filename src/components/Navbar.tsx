@@ -10,6 +10,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const [active, setActive] = useState("");
+  const activeNav = "font-extrabold text-[var(--primary-600)] drop-shadow after:hidden"
   const navLink = "relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:w-0 after:origin-center after:h-[1px] after:bg-[var(--neutral-900)] after:transition-all after:duration-300 hover:after:w-full";
 
   return (
@@ -30,16 +31,16 @@ export default function Navbar() {
 
           {/* CENTER - MENU */}
           <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-sm font-normal">
-            <Link href="/about" className={`${navLink} ${pathname === "/about" ? "font-bold after:hidden" : ""}`}>
+            <Link href="/about" className={`${navLink} ${pathname === "/about" ? activeNav : ""}`}>
               About
             </Link>
-            <Link href="/#community" onClick={() => setActive("community")} className={`${navLink} ${active === "community" ? "font-bold after:hidden" : ""}`}>
+            <Link href="/#community" onClick={() => setActive("community")} className={`${navLink} ${active === "community" ? activeNav : ""}`}>
               Community
             </Link>
-            <Link href="/support" className={`${navLink} ${pathname === "/support" ? "font-bold after:hidden" : ""}`}>
+            <Link href="/support" className={`${navLink} ${pathname === "/support" ? activeNav : ""}`}>
               Support
             </Link>
-            <Link href="/#faqs" onClick={() => setActive("faqs")} className={`${navLink} ${active === "faqs" ? "font-bold after:hidden" : ""}`}>
+            <Link href="/#faqs" onClick={() => setActive("faqs")} className={`${navLink} ${active === "faqs" ? activeNav : ""}`}>
               FAQs
             </Link>
           </div>
