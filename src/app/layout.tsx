@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${plusJakarta.variable} antialiased`}>
+      <body className={`${plusJakarta.className} ${plusJakarta.variable} antialiased`}>
         {children}
       </body>
     </html>

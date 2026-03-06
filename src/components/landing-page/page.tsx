@@ -1,7 +1,9 @@
+import Navbar from "@/components/Navbar";
+
 export default function Landing() {
   return (
     <main className="min-h-screen">
-      StudentsxCEOS revamp
+      <Navbar />
     </main>
   );
 }
