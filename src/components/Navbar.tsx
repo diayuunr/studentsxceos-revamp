@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full z-50 px-9 py-8 transition-shadow">
-      <div className="mx-auto max-w-[98rem] rounded-2xl bg-[var(--color-background)] px-6 py-3 shadow-sm">
+      <div className="mx-auto max-w-[98rem] rounded-2xl bg-[var(--color-white)] px-6 py-3 shadow-sm">
         
         <div className="relative flex items-center justify-between">
 
