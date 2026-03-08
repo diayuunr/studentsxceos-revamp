@@ -48,7 +48,7 @@
   --error-500: #F04438;
 
   /* Fonts */
-  --font-display: var(--font-plus-jakarta);
+  --font-display: var(--font-haas-grot);
   --font-body: var(--font-plus-jakarta);
 }
 
@@ -60,7 +60,7 @@
 }
 
 body {
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-haas-grot), sans-serif;
   background: var(--color-white);
   color: var(--neutral-900);
   margin: 0;
