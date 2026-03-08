@@ -10,12 +10,12 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const [active, setActive] = useState("");
-  const activeNav = "font-extrabold text-[var(--primary-600)] drop-shadow after:hidden"
+  const activeNav = "font-medium text-[var(--primary-600)] drop-shadow after:hidden"
   const navLink = "relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:w-0 after:origin-center after:h-[1px] after:bg-[var(--neutral-900)] after:transition-all after:duration-300 hover:after:w-full";
 
   return (
     <nav className="fixed w-full z-50 px-9 py-8 transition-shadow">
-      <div className="mx-auto max-w-[98rem] rounded-2xl bg-[var(--color-background)] px-6 py-3 shadow-sm">
+      <div className="mx-auto max-w-[98rem] rounded-2xl bg-[var(--color-white)] px-6 py-2 shadow-sm">
         
         <div className="relative flex items-center justify-between">
 
@@ -30,7 +30,7 @@ export default function Navbar() {
           </div>
 
           {/* CENTER - MENU */}
-          <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-sm font-normal">
+          <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-base font-normal">
             <Link href="/about" className={`${navLink} ${pathname === "/about" ? activeNav : ""}`}>
               About
             </Link>
