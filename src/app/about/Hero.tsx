@@ -12,13 +12,13 @@ export default function Hero() {
           fill
           className="w-full object-top scale-100 h-[50%] md:h-full"
         />
-      <div className="absolute top-0 left-0 w-full h-full md:h-full bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-600)] opacity-97"></div>
+      <div className="absolute top-0 left-0 w-full h-full md:h-full bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] opacity-97"></div>
       </div>
       {/* Hero Content */}
       <div className="relative z-10 max-w-3xl mx-auto text-white">
-        <p className="text-sm md:text-sm font-light mt-20 md:mt-8">About Us</p>
-        <h1 className="text-2xl md:text-3xl font-bold mt-4">Transforming Indonesia&apos;s Brigthest Minds</h1>
-        <p className="text-xs md:text-lg md:max-w-2xl md:text-center mx-auto font-light mt-4">Connecting ambitious students with world-class business leaders to shape the future of Indonesia.</p>
+        <p className="text-sm md:text-base font-light mt-20 md:mt-8 tracking-wide">About us</p>
+        <h1 className="text-2xl md:text-3xl font-medium mt-4 glow-text tracking-wide">Transforming Indonesia&apos;s Brigthest Minds</h1>
+        <p className="text-xs md:text-lg md:max-w-xl md:text-center mx-auto font-light mt-4 tracking-wide">Connecting ambitious students with world-class business leaders to shape the future of Indonesia.</p>
       </div>
       {/* Hero Photo */}
       <div className="flex justify-center bg-[var(--color-white)] w-full mt-10 hidden md:flex md:items-center">
