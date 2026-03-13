@@ -22,10 +22,10 @@ const values = [
 export default function Why() {
   return (
     <>
-    <section className="w-full px-6 md:px-16 py-20 md:py-5 text-center mb-10">
+    <section className="relative overflow-hidden w-full px-6 md:px-16 py-20 md:py-5 text-center mb-10">
       <div>
-        <div className="absolute inset-1 flex items-center justify-center">
-            <div className="w-3/4 h-2/4 bg-blue-400/10 blur-2xl rounded-full translate-y-130"></div>
+        <div className="absolute inset-0 -z-10 flex items-center justify-center">
+            <div className="w-3/4 h-2/4 bg-blue-400/10 blur-2xl rounded-full"></div>
         </div>
       <h1 className="text-xl md:text-3xl font-medium mb-2">Why Support StudentsxCEOs?</h1>
       <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-10">

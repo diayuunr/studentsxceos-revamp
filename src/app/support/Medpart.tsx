@@ -10,7 +10,7 @@ function chunkArray<T>(array: T[], size: number): T[][] {
   );
 }
 
-export default function Partners() {
+export default function Medpart() {
   const logoRows = chunkArray(logos, 14);
 
   return (
@@ -21,7 +21,7 @@ export default function Partners() {
         </h1>
 
         <p className="text-sm md:text-lg">
-          Each chapter develops its own initiatives and programs, under the shared values of SXC.
+          Amplifying our voice and reach through strategic alliances with leading media platforms.
         </p>
       </div>
 

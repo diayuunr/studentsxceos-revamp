@@ -32,7 +32,7 @@ const values = [
             <div className="relative justify-center h-full pb-15 max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
             {values.map((value, i) => (
-            <div key={i} className="border border-[var(--color-neutral-200)] rounded-xl p-6 shadow-sm bg-[var(--color-white)] ">
+            <div key={i} className="border border-[var(--color-neutral-200)] rounded-xl p-6 shadow-sm bg-[var(--color-white)] flex flex-col h-full">
                 <div className="flex items-center gap-3 mb-2">
                 <div className="w-8 h-8 flex items-center justify-center text-[var(--color-white)] rounded-md bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)]">
                     {value.icon}
@@ -47,7 +47,7 @@ const values = [
                 <p className="text-sm font-light max-w-md tracking-wide text-left">
                 {value.description}
                 </p>
-                <div>
+                <div className="mt-auto">
                 <button className="mt-4 py-1.5 w-full rounded-md bg-[var(--color-black)] text-white text-sm font-medium cursor-pointer hover:bg-[var(--neutral-800)] transition-colors">
                     Join our community
                 </button>
