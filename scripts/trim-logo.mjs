@@ -2,8 +2,8 @@ import sharp from "sharp";
 import fs from "fs";
 import path from "path";
 
-const inputDir = "./public/logos/partner";
-const outputDir = "./public/logos-trim/partner";
+const inputDir = "./public/logos/medpart";
+const outputDir = "./public/logos-trim/medpart";
 
 console.log("Reading from:", inputDir);
 
