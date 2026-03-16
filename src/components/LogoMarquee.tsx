@@ -23,7 +23,7 @@ export default function LogoMarquee({
       <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-white to-transparent z-10" />
 
       <div
-        className="flex w-max gap-16 will-change-transform"
+        className="flex w-max gap-0 md:gap-10 will-change-transform"
         style={{
             animation: `marquee ${speed}s linear infinite`,
             animationDirection: direction === "right" ? "reverse" : "normal",
@@ -36,7 +36,7 @@ export default function LogoMarquee({
               alt="partner logo"
               width={160}
               height={100}
-              className="object-contain h-full w-full transition duration-300"
+              className="object-contain h-full w-full transition duration-300 md:scale-100 scale-75 hover:scale-110"
             />
           </div>
         ))}

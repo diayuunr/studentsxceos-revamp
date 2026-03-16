@@ -1,6 +1,6 @@
 'use client';
 
-import { Award, Heart, Trello } from "react-feather";
+import { Heart } from "react-feather";
 
 export default function Ways() {
 const values = [
@@ -12,20 +12,20 @@ const values = [
     {
         title: "Financial Support",
         description: "Make a direct impact by funding our leadership programs, providing student scholarships, sponsoring events, and supporting the establishment of new chapters across the nation.",
-        icon: <Award/>
+        icon: <Heart/>
     },
     {
         title: "Mentorship & Expertise",
         description: "Share your industry expertise and shape future leaders by serving as a mentor, facilitating workshops, joining our advisory board, or speaking at our national events.",
-        icon: <Trello/>
+        icon: <Heart/>
     },
 ]
   return (
-    <section className="w-full px-6 md:px-16 py-20 md:py-5 mb-20 text-center">
-        <div className="relative p-[2px] rounded-[22px] bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] backdrop-blur-md w-full">
-            <div className="relative justify-center h-full pt-20 pb-10 max-w-3xl mx-auto">
-            <h1 className="text-xl md:text-3xl font-medium mb-2 text-[var(--color-white)]">Ways to Support</h1>
-            <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal text-[var(--color-white)]">
+    <section className="w-full px-6 md:px-16 py-20 md:py-5 md:mb-20 text-center md:bg-none bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] backdrop-blur-md">
+        <div className="relative p-[2px] rounded-[22px] md:bg-gradient-to-b md:from-[var(--neutral-900)] md:to-[var(--primary-500)] backdrop-blur-md w-full">
+            <div className="relative justify-center h-full md:pt-20 pb-10 max-w-3xl mx-auto">
+            <h1 className="text-2xl md:text-3xl font-medium mb-2 text-[var(--color-white)]">Ways to Support</h1>
+            <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal text-[var(--color-white)] tracking-wide">
                 Choose how you&apos;d like to contribute to our mission.
             </p>
             </div>
@@ -44,11 +44,11 @@ const values = [
 
                 <div className="border-t border-[var(--color-neutral-200)] mb-3"></div>
 
-                <p className="text-sm font-light max-w-md tracking-wide text-left">
+                <p className="text-sm font-light max-w-md tracking-wider text-left">
                 {value.description}
                 </p>
                 <div className="mt-auto">
-                <button className="mt-4 py-1.5 w-full rounded-md bg-[var(--color-black)] text-white text-sm font-medium cursor-pointer hover:bg-[var(--neutral-800)] transition-colors">
+                <button className="mt-4 py-1.5 w-full rounded-md bg-[var(--color-black)] text-white text-sm font-medium cursor-pointer hover:bg-[var(--neutral-800)] transition-colors tracking-wider">
                     Join our community
                 </button>
                 </div>
