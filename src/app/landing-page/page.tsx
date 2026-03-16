@@ -1,14 +1,15 @@
 // src/app/page.tsx
-"use client";
-import Image from "next/image";
-import { useState } from "react";
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const faqs = [
     {
-      question: "What is StudentsxCEOs and what makes it unique?",
+      question: 'What is StudentsxCEOs and what makes it unique?',
       answer:
         "StudentsxCEOs (SxC) is Indonesia's premier leadership accelerator and fraternal organization that bridges exceptional students with today's top business leaders...",
     },
@@ -16,17 +17,17 @@ export default function Home() {
       question:
         'Why does StudentsxCEOs focus specifically on "business leaders"?',
       answer:
-        "We believe that strong business leadership is the core engine for economic growth...",
+        'We believe that strong business leadership is the core engine for economic growth...',
     },
     {
-      question: "Who can join StudentsxCEOs and how selective is the process?",
+      question: 'Who can join StudentsxCEOs and how selective is the process?',
       answer:
-        "Any active undergraduate student with a strong passion for business and leadership can apply...",
+        'Any active undergraduate student with a strong passion for business and leadership can apply...',
     },
     {
-      question: "Is there any membership fee to join the organization?",
+      question: 'Is there any membership fee to join the organization?',
       answer:
-        "The details regarding membership fees are usually discussed during the onboarding process...",
+        'The details regarding membership fees are usually discussed during the onboarding process...',
     },
   ];
 
@@ -39,18 +40,18 @@ export default function Home() {
     // == MAIN BACKGROUND ==
     <main className="bg-white min-h-screen font-sans">
       {/* == HERO SECTION CONTAINER == */}
-      <div className="relative w-full  mx-auto h-[800px] rounded-b-[20px] overflow-hidden flex flex-col shadow-[0px_6px_30px_rgba(0,0,0,0.4)]">
+      <div className="relative w-full  mx-auto h-200 rounded-b-[20px] overflow-hidden flex flex-col shadow-[0px_6px_30px_rgba(0,0,0,0.4)]">
         {/* 1. BACKGROUND IMAGE & OVERLAY */}
         <div className="absolute inset-0 z-0">
           {
             <Image
-              src="/hero.jpg"
+              src="/hero-background.jpg"
               alt="Background community"
               fill
               className="object-cover"
             />
           }
-          <div className="absolute inset-0 bg-linear-to-br from-[#121926]/95 to-[#0A3C8E] drop-shadow-[0_0_20px_rgba(10,60,142,0.6)] opacity-90"></div>
+          <div className="absolute inset-0 bg-linear-to-br from-[#121926] to-[#0A3C8E] drop-shadow-[0_0_20px_rgba(10,60,142,0.6)] opacity-90"></div>
           <div className="absolute pointer-events-none -bottom-48 -right-48 w-[701px] h-[657px] rounded-full bg-gradient-to-b from-[#296A90] to-[#CCE0FF] blur-[300px]"></div>
           <div className="absolute pointer-events-none w-[701px] h-[657px] bg-[#3FB4A0] opacity-100 blur-[275px] rounded-full -bottom-90 -right-10"></div>
         </div>
@@ -58,8 +59,8 @@ export default function Home() {
         {/* 2. KONTEN DALAM HERO SECTION */}
         <div className="relative z-10 w-full px-6 md:px-12 flex flex-col h-full">
           {/* NAVBAR */}
-          <nav className="relative flex items-center justify-between py-4 md:py-6 px-8 bg-white rounded-[12px] text-[#121926] mt-[49px] shadow-x1 max-w-93% mx-auto w-full">
-            <div className="flex items-center cursor-pointerf">
+          <nav className="relative z-50 flex items-center justify-between py-4 md:py-6 px-8 bg-white rounded-[12px] text-[#121926] mt-[49px] shadow-x1 max-w-93% mx-auto w-full">
+            <div className="flex items-center cursor-pointer">
               {
                 <Image
                   src="/logo.png"
@@ -72,29 +73,84 @@ export default function Home() {
             </div>
 
             <ul className="hidden absolute left-1/2 -translate-x-1/2 md:flex gap-7 text-sm font-semibold text-[#121926]">
-              <li className="cursor-pointer hover:text-[#0A3C8E] transition-colors">
-                About
+              <li>
+                <a
+                  href="#about"
+                  className="cursor-pointer hover:text-[#0A3C8E] transition-colors"
+                >
+                  About
+                </a>
               </li>
-              <li className="cursor-pointer hover:text-[#0A3C8E] transition-colors">
-                Community
+              <li>
+                <a
+                  href="#what-you-gain"
+                  className="cursor-pointer hover:text-[#0A3C8E] transition-colors"
+                >
+                  Community
+                </a>
               </li>
-              <li className="cursor-pointer hover:text-[#0A3C8E] transition-colors">
-                Support
+              <li>
+                <a
+                  href="#footer"
+                  className="cursor-pointer hover:text-[#0A3C8E] transition-colors"
+                >
+                  Support
+                </a>
               </li>
-              <li className="cursor-pointer hover:text-[#0A3C8E] transition-colors">
-                FAQs
+              <li>
+                <a
+                  href="#faq"
+                  className="cursor-pointer hover:text-[#0A3C8E] transition-colors"
+                >
+                  FAQs
+                </a>
               </li>
             </ul>
 
-            <button className="md:hidden text-2xl font-light text-[#0A3C8E]">
-              ☰
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden text-2xl font-light text-[#121926] focus:outline-none"
+            >
+              {isMobileMenuOpen ? '✕' : '☰'}
             </button>
+
+            {isMobileMenuOpen && (
+              <div className="absolute top-[110%] left-0 w-full bg-white rounded-xl shadow-lg flex flex-col p-5 gap-4 md:hidden border border-slate-100">
+                <a
+                  href="#about"
+                  onClick={() => setIsMobileMenuOpen(false)} // Kalau diklik, otomatis nutup menunya
+                  className="text-[#121926] font-semibold hover:text-[#0A3C8E] transition-colors"
+                >
+                  About
+                </a>
+                <a
+                  href="#what-you-gain"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-[#121926] font-semibold hover:text-[#0A3C8E] transition-colors"
+                >
+                  Community
+                </a>
+                <a
+                  href="#footer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-[#121926] font-semibold hover:text-[#0A3C8E] transition-colors"
+                >
+                  Support
+                </a>
+                <a
+                  href="#faq"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-[#121926] font-semibold hover:text-[#0A3C8E] transition-colors"
+                >
+                  FAQs
+                </a>
+              </div>
+            )}
           </nav>
 
-          {/* TEKS HERO */}
           <div className="flex-1 flex flex-col items-center justify-center text-center pb-10">
             <h1 className="text-[33px] md:text-[56px] text-white font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] tracking-tight leading-tight">
-              Nurture and Connect{" "}
+              Nurture and Connect{' '}
               <span className="hidden md:inline">Future </span>
             </h1>
 
@@ -107,7 +163,7 @@ export default function Home() {
               shape the future of Indonesia.
             </p>
 
-            <button className="mt-10 bg-white text-black font-bold py-3 px-8 rounded-xl drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-gray-100 transition shadow-lg text-base">
+            <button className="cursor-pointer mt-10 bg-white text-black font-bold py-3 px-8 rounded-xl drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-gray-100 transition shadow-lg text-base">
               Join our community
             </button>
           </div>
@@ -115,7 +171,10 @@ export default function Home() {
       </div>
 
       {/* == SECTION ABOUT US == */}
-      <section className="mx-auto max-w-full px-2 md:px-20 py-24 text-black">
+      <section
+        id="about"
+        className="mx-auto max-w-full px-2 md:px-20 py-24 text-black"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="pr-4 text-center md:text-left">
             <p className="text-[18px] font-semibold text-gray-800 mb-4 tracking-tight lowercase">
@@ -137,8 +196,8 @@ export default function Home() {
             <div className="w-full overflow-hidden relative">
               <div className="absolute top-0 left-0 w-24 md:w-100 h-full bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
 
-              <div className="flex w-[200%] animate-marquee">
-                <div className="flex gap-8 md:gap-16 w-1/2 justify-around px-8">
+              <div className="flex w-[100%] animate-marquee">
+                <div className="flex gap-8 md:gap-16 min-w-full shrink-0 justify-around px-8">
                   <div className="flex flex-col items-center">
                     <span className="text-2xl md:text-4xl font-bold bg-linear-to-b from-[#121926] to-[#0A3C8E] bg-clip-text text-transparent">
                       20+
@@ -173,7 +232,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="flex gap-8 md:gap-16 w-1/2 justify-around px-8">
+                <div className="flex gap-8 md:gap-16 shrink-0 min-w-full justify-around px-8">
                   <div className="flex flex-col items-center">
                     <span className="text-2xl md:text-4xl font-bold  bg-linear-to-b from-[#121926] to-[#0A3C8E] bg-clip-text text-transparent">
                       20+
@@ -209,7 +268,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <button className="mt-12 bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-semibold py-3 px-8 rounded-lg shadow-xl hover:opacity-90 transition">
+            <button className="cursor-pointer mt-12 bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-semibold py-3 px-8 rounded-lg shadow-xl hover:opacity-90 transition">
               Join our community
             </button>
           </div>
@@ -217,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* == SECTION WHAT YOU GAIN == */}
-      <section className="max-w-full mx-auto md:px-6 py-12">
+      <section id="what-you-gain" className="max-w-full mx-auto md:px-6 py-12">
         <div className="bg-linear-to-b from-[#121926] to-[#0A3C8E] rounded-xl px-5 py-5 md:p-30 flex flex-col items-center shadow-xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-10 mt-20 md:mt-0 text-center tracking-tight">
             What You Gain Through StudentxCEOs
@@ -252,10 +311,10 @@ export default function Home() {
               </div>
               <hr className="border-gray-200 mb-4" />
               <p className="text-[#121926] text-sm md:text-base leading-relaxed font-light md:mb-8">
-                Participants gain exposure to{" "}
+                Participants gain exposure to{' '}
                 <span className="font-semibold text-slate-900">
                   real-world challenges
-                </span>{" "}
+                </span>{' '}
                 and learn how leaders navigate complex situations.
               </p>
             </div>
@@ -284,11 +343,11 @@ export default function Home() {
               </div>
               <hr className="border-gray-200 mb-4" />
               <p className="text-[#121926] text-sm md:text-base leading-relaxed font-light md:mb-8">
-                Exclusive events that connect students with{" "}
+                Exclusive events that connect students with{' '}
                 <span className="font-semibold text-slate-900">
                   leaders, alumni, and peers
-                </span>{" "}
-                — creating open doors to{" "}
+                </span>{' '}
+                — creating open doors to{' '}
                 <span className="font-semibold text-slate-900">
                   future opportunities.
                 </span>
@@ -320,7 +379,7 @@ export default function Home() {
               <hr className="border-gray-200 mb-4" />
               <p className="text-[#121926] text-sm md:text-base leading-relaxed font-light md:mb-8">
                 Access to experienced professionals and executives who share
-                practical{" "}
+                practical{' '}
                 <span className="font-semibold text-slate-900">
                   insights and career guidance.
                 </span>
@@ -353,7 +412,7 @@ export default function Home() {
               <p className="text-[#121926] text-sm md:text-base leading-relaxed font-light md:mb-8">
                 <span className="font-semibold text-slate-900">
                   Hands-on workshops
-                </span>{" "}
+                </span>{' '}
                 focused on practical competencies such as communication,
                 problem-solving, and critical thinking.
               </p>
@@ -378,19 +437,19 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
             {[
-              { name: "Jakarta", file: "jakarta.png" },
-              { name: "Yogyakarta", file: "yogyakarta.png" },
-              { name: "Bandung", file: "bandung.png" },
-              { name: "East Java", file: "east java.png" },
-              { name: "Semarang", file: "semarang.png" },
+              { name: 'Jakarta', file: 'jakarta.png' },
+              { name: 'Yogyakarta', file: 'yogyakarta.png' },
+              { name: 'Bandung', file: 'bandung.png' },
+              { name: 'East Java', file: 'east java.png' },
+              { name: 'Semarang', file: 'semarang.png' },
             ].map((city, index) => (
               <div
                 key={city.name}
                 className={`relative bg-linear-to-b from-[#121926] to-[#0A3C8E] rounded-[20px] p-6 flex flex-col items-center justify-end overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-xl cursor-pointer
                   ${
                     index === 4
-                      ? "col-span-2 md:col-span-1 aspect-[2/1.1] md:aspect-square"
-                      : "aspect-square"
+                      ? 'col-span-2 md:col-span-1 aspect-[2/1.1] md:aspect-square'
+                      : 'aspect-square'
                   }
                 `}
               >
@@ -451,7 +510,7 @@ export default function Home() {
             Each chapter develops its own initiatives and programs, under the
             shared values of SXC.
           </p>
-          <button className="mt-6 mb-6 bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition">
+          <button className="mt-6 mb-6 bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-semibold py-3 px-8 rounded-lg hover:opacity-90 transition cursor-pointer">
             Join our community
           </button>
         </div>
@@ -459,22 +518,22 @@ export default function Home() {
           {/* === LOGOS CONTAINER (FLEXBOX MAGIC) === */}
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14 w-full max-w-350 mx-auto">
             {[
-              "paragon",
-              "pizzahut",
-              "loreal",
-              "bri",
-              "jbl",
-              "cake",
-              "gojek",
-              "avoskin",
-              "tbi",
-              "ajaib",
-              "puyo",
-              "blibli",
-              "jbl",
-              "loreal",
-              "pizzahut",
-              "bri",
+              'paragon',
+              'pizzahut',
+              'loreal',
+              'bri',
+              'jbl',
+              'cake',
+              'gojek',
+              'avoskin',
+              'tbi',
+              'ajaib',
+              'puyo',
+              'blibli',
+              'jbl',
+              'loreal',
+              'pizzahut',
+              'bri',
             ].map((brand, index) => (
               <div
                 key={index}
@@ -485,9 +544,9 @@ export default function Home() {
                   alt={`${brand} logo`}
                   className={`w-auto object-contain 
                     ${
-                      brand.includes("pizzahut") || brand.includes("cake")
-                        ? "h-14 md:h-20"
-                        : "h-8 md:h-20"
+                      brand.includes('pizzahut') || brand.includes('cake')
+                        ? 'h-14 md:h-20'
+                        : 'h-8 md:h-20'
                     }
                   `}
                 />
@@ -497,7 +556,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full bg-white px-6 py-24">
+      {/* == SECTION FAQ == */}
+      <section id="faq" className="w-full bg-white px-6 py-24">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-10 tracking-tight text-center">
             Frequently Asked Questions
@@ -511,7 +571,7 @@ export default function Home() {
                 <div
                   key={index}
                   className={`w-full rounded-2xl cursor-pointer transition-colors duration-300 overflow-hidden
-                    ${isOpen ? "bg-[#F4F7F9] border-transparent" : "bg-white border border-gray-200 hover:border-gray-300"}
+                    ${isOpen ? 'bg-[#F4F7F9] border-transparent' : 'bg-white border border-gray-200 hover:border-gray-300'}
                   `}
                   onClick={() => toggleFAQ(index)}
                 >
@@ -555,7 +615,7 @@ export default function Home() {
 
                   <div
                     className={`px-6 overflow-hidden transition-all duration-300 ease-in-out
-                      ${isOpen ? "max-h-96 pb-6 opacity-100" : "max-h-0 opacity-0"}
+                      ${isOpen ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 opacity-0'}
                     `}
                   >
                     <p className="text-slate-600 text-sm md:text-base leading-relaxed">
@@ -568,7 +628,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* == BATAS SECTION FAQ == */}
 
       <section className="max-w-full mx-auto px-4 md:px-6 py-12">
         <div className="relative rounded-[20px] px-5 py-10 md:p-15 shadow-xl overflow-hidden flex flex-col items-center">
@@ -593,11 +652,11 @@ export default function Home() {
             </p>
 
             <div className="flex gap-5 mb-8">
-              <button className="flex-1 md:flex-none bg-white text-black font-bold py-2 md:py-3 px-2 md:px-8 rounded-xl drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-gray-100 transition shadow-lg text-xs md:text-base whitespace-nowrap">
+              <button className="cursor-pointer flex-1 md:flex-none bg-white text-black font-bold py-2 md:py-3 px-2 md:px-8 rounded-xl drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-gray-100 transition shadow-lg text-xs md:text-base whitespace-nowrap">
                 Join our community
               </button>
 
-              <button className="flex-1 md:flex-none bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-semibold py-2 md:py-3 px-2 md:px-8 rounded-xl border border-white/20 hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap">
+              <button className="cursor-pointer flex-1 md:flex-none bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-semibold py-2 md:py-3 px-2 md:px-8 rounded-xl border border-white/20 hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap">
                 Partner with us
               </button>
             </div>
@@ -606,7 +665,7 @@ export default function Home() {
       </section>
 
       {/* == SECTION FOOTER == */}
-      <footer className="w-full bg-white px-4 md:px-8 pb-8">
+      <footer id="footer" className="w-full bg-white px-4 md:px-8 pb-8">
         <div className="max-w-full mx-auto bg-linear-to-b from-[#E6F2F9] to-[#FDFDFD] rounded-[30px] pt-16 pb-8 px-8 md:px-16 flex flex-col">
           <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
             <div className="flex flex-col max-w-sm md:items-start text-left">
@@ -629,14 +688,13 @@ export default function Home() {
               </a>
             </div>
 
-            {/* === KANAN: MENU LINK === */}
             <div className="flex justify-center md:justify-end gap-16 md:gap-24">
               <div className="flex flex-col items-start">
                 <h4 className="text-slate-900 font-bold mb-6">Page</h4>
                 <ul className="flex flex-col gap-4">
                   <li>
                     <a
-                      href="#"
+                      href="#about"
                       className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                     >
                       About Us
@@ -644,7 +702,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#what-you-gain"
                       className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                     >
                       Community
@@ -652,7 +710,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#faq"
                       className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                     >
                       Support
@@ -666,7 +724,7 @@ export default function Home() {
                 <ul className="flex flex-col gap-4">
                   <li>
                     <a
-                      href="#"
+                      href="#faq"
                       className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                     >
                       FAQs
@@ -674,7 +732,7 @@ export default function Home() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="#footer"
                       className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                     >
                       Contact
