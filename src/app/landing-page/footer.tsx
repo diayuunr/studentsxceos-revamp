@@ -11,7 +11,8 @@ export default function Footer() {
             />
 
             <p className="text-slate-700 text-sm md:text-base leading-relaxed mb-6 font-medium text-center md:text-start">
-              Connecting ambitious students with world-class business leaders to shape the future of Indonesia.
+              Connecting ambitious students with world-class business leaders to
+              shape the future of Indonesia.
             </p>
 
             <a
@@ -27,17 +28,26 @@ export default function Footer() {
               <h4 className="text-slate-900 font-bold mb-6">Page</h4>
               <ul className="flex flex-col gap-4">
                 <li>
-                  <a href="#about" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                  <a
+                    href="#about"
+                    className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
+                  >
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#what-you-gain" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                  <a
+                    href="#what-you-gain"
+                    className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
+                  >
                     Community
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                  <a
+                    href="#faq"
+                    className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
+                  >
                     Support
                   </a>
                 </li>
@@ -48,12 +58,20 @@ export default function Footer() {
               <h4 className="text-slate-900 font-bold mb-6">Support</h4>
               <ul className="flex flex-col gap-4">
                 <li>
-                  <a href="#faq" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                  <a
+                    href="#faq"
+                    className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
+                  >
                     FAQs
                   </a>
                 </li>
                 <li>
-                  <a href="#footer" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                  <a
+                    href="https://www.instagram.com/studentsxceos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
+                  >
                     Contact
                   </a>
                 </li>
