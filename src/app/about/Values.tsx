@@ -1,6 +1,7 @@
 'use client';
 
 import { Award, Heart, Trello } from "react-feather";
+import { motion, easeOut } from "framer-motion";
 
 const values = [
     {
@@ -19,22 +20,81 @@ const values = [
         icon: <Trello/>
     },
 ]
+
 export default function Values() {
   return (
     <>
-    <section className="w-full px-6 md:px-16 py-20 md:py-5 text-center mb-10">
+    <motion.section
+      className="w-full px-5 md:px-16 py-5 text-center mb-10"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.6, ease: easeOut }}
+      viewport={{ once: true }}
+    >
       <div>
-      <h1 className="text-xl md:text-3xl font-medium mb-3">Our Core Values</h1>
-      <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-10 tracking-wide">
+
+      <motion.h1
+        className="text-xl md:text-3xl font-medium mb-3"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: easeOut }}
+        viewport={{ once: true }}
+      >
+        Our Core Values
+      </motion.h1>
+
+      <motion.p
+        className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-10 tracking-wide"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: easeOut, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
         Each chapter develops its own initiatives and programs, under the shared values of SXC.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+      </motion.p>
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 max-w-5xl mx-auto px-4"
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          show: {
+            transition: {
+              staggerChildren: 0.2
+            }
+          }
+        }}
+      >
         {values.map((value, i) => (
-        <div key={i} className="border border-[var(--color-neutral-200)] rounded-xl p-6 shadow-sm">
+        <motion.div
+          key={i}
+          className="border border-[var(--color-neutral-300)] rounded-xl p-6 shadow-sm"
+          variants={{
+            hidden: { opacity: 0, y: 50, scale: 0.95 },
+            show: {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+              transition: { duration: 0.6, ease: easeOut }
+            }
+          }}
+          whileHover={{ y: -8, scale: 1.03 }}
+        >
             <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 flex items-center justify-center text-[var(--color-white)] rounded-md bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)]">
+            
+            <motion.div
+              className="w-8 h-8 flex items-center justify-center text-[var(--color-white)] rounded-md bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)]"
+              initial={{ scale: 0, rotate: -90 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.5, ease: easeOut, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ rotate: 10, scale: 1.1 }}
+            >
                 {value.icon}
-            </div>
+            </motion.div>
+
             <h2 className="text-md md:text-lg font-medium">
                 {value.title}
             </h2>
@@ -42,14 +102,21 @@ export default function Values() {
 
             <div className="border-t border-[var(--color-neutral-200)] mb-3"></div>
 
-            <p className="text-sm font-light max-w-md text-left tracking-wider">
+            <motion.p
+              className="text-sm font-light max-w-md text-left tracking-wider"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5, ease: easeOut, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
             {value.description}
-            </p>
-        </div>
+            </motion.p>
+        </motion.div>
         ))}
+      </motion.div>
+
       </div>
-      </div>
-    </section>
+    </motion.section>
     </>
   );
 }

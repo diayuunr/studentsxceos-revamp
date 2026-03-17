@@ -1,8 +1,9 @@
 'use client';
 import Image from "next/image";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const methodology = [
+const speakers = [
   {
     title: "Eka Nilam Dari",
     description: "Director of ShopeePay",
@@ -38,57 +39,83 @@ const methodology = [
 export default function Speakers() {
   const [expanded, setExpanded] = useState(false);
 
-  const visibleSpeakers = expanded
-    ? methodology
-    : methodology.slice(0, 4);
+  const visibleSpeakers = expanded ? speakers : speakers.slice(0, 4);
 
   return (
-    <section className="w-full px-6 md:px-16 py-20 md:py-10 text-center">
-      <h1 className="text-xl md:text-3xl font-medium mb-3">
-        Meet Our Speakers
-      </h1>
+    <section className="w-full px-5 md:px-16 py-5 md:py-10 text-center">
 
-      <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-10">
+      {/* TITLE */}
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-xl md:text-3xl font-medium mb-3"
+      >
+        Meet Our Speakers
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2 }}
+        className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-10 tracking-wide"
+      >
         Leaders from top companies who&apos;ve shared their insights with SxC
-      </p>
+      </motion.p>
 
       <div className="flex justify-center">
-      <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
-        {visibleSpeakers.map((method, i) => (
-          <div
-            key={i}
-            className="border border-[var(--color-neutral-200)] rounded-xl p-6 text-center shadow-sm"
-          >
-            <div className="relative w-full h-45 overflow-hidden rounded-lg">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-3/4 h-3/4 bg-blue-400/20 blur-2xl rounded-full"></div>
-              </div>
+        <motion.div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
 
-              <Image
-                src={method.image}
-                alt={method.title}
-                className="object-contain scale-170 z-10 translate-y-12"
-                fill
-              />
-            </div>
+          <AnimatePresence>
+            {visibleSpeakers.map((speaker, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                transition={{ duration: 0.4 }}
+                layout
+                whileHover={{ scale: 1.05 }}
+                className="border border-[var(--color-neutral-200)] rounded-xl px-10 md:px-7 p-6 text-center shadow-sm"
+              >
+                <div className="relative w-full h-45 overflow-hidden rounded-lg">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-3/4 h-3/4 bg-blue-400/20 blur-2xl rounded-full"></div>
+                  </div>
 
-            <div className="border border-[var(--color-neutral-200)] rounded-xl px-2 py-2 text-center shadow-xs">
-              <h2 className="text-md md:text-lg font-medium">
-                {method.title}
-              </h2>
-              <p className="text-sm md:text-base font-normal max-w-md">
-                {method.description}
-              </p>
-            </div>
-          </div>
-        ))}
+                  <Image
+                    src={speaker.image}
+                    alt={speaker.title}
+                    className="object-contain scale-170 z-10 translate-y-12"
+                    fill
+                  />
+                </div>
+
+                <div className="border border-[var(--color-neutral-200)] rounded-xl px-8 md:px-2 py-2 text-center shadow-xs">
+                  <h2 className="text-md md:text-lg font-medium">
+                    {speaker.title}
+                  </h2>
+                  <p className="text-sm md:text-base font-normal max-w-md">
+                    {speaker.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+
+        </motion.div>
       </div>
-      </div>
 
-      <button onClick={() => setExpanded(!expanded)}
-        className="px-4 py-2 mt-10 text-sm font-medium text-white rounded-md bg-[var(--color-black)] cursor-pointer">
-          {expanded ? "See Less" : "See More"}
-      </button>
+      <motion.button
+        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.05 }}
+        onClick={() => setExpanded(!expanded)}
+        className="px-4 py-2 mt-10 text-sm font-medium text-white rounded-md bg-[var(--color-black)] cursor-pointer"
+      >
+        {expanded ? "See Less" : "See More"}
+      </motion.button>
     </section>
   );
 }
