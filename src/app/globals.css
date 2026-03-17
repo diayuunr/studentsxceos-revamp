@@ -2,6 +2,18 @@
 
 :root {
 
+  @theme {
+
+  --animate-marquee: marquee 10s linear infinite;
+
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+
   /* COLORS */
 
   --color-white: #ffffff;
@@ -74,4 +86,7 @@ body {
   text-shadow:
     0 0 6px rgba(255, 255, 255, 0.305),
     0 0 24px rgba(255, 255, 255, 0.4);
+}
+html {
+  scroll-behavior: smooth;
 }
