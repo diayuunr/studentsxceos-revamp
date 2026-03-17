@@ -1,0 +1,73 @@
+export default function Footer() {
+  return (
+    <footer id="footer" className="w-full bg-white px-4 md:px-8 pb-8">
+      <div className="max-w-full mx-auto bg-linear-to-b from-[#E6F2F9] to-[#FDFDFD] rounded-[30px] pt-16 pb-8 px-8 md:px-16 flex flex-col">
+        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
+          <div className="flex flex-col max-w-sm md:items-start text-left">
+            <img
+              src="/logo-sxc.png"
+              alt="StudentsxCEOs Logo"
+              className="h-10 w-auto object-contain mb-6"
+            />
+
+            <p className="text-slate-700 text-sm md:text-base leading-relaxed mb-6 font-medium text-center md:text-start">
+              Connecting ambitious students with world-class business leaders to shape the future of Indonesia.
+            </p>
+
+            <a
+              href="mailto:studentxceos@gmail.com"
+              className="text-slate-700 text-sm md:text-base font-medium hover:text-[#0A3C8E] transition-colors text-center"
+            >
+              studentxceos@gmail.com
+            </a>
+          </div>
+
+          <div className="flex justify-center md:justify-end gap-16 md:gap-24">
+            <div className="flex flex-col items-start">
+              <h4 className="text-slate-900 font-bold mb-6">Page</h4>
+              <ul className="flex flex-col gap-4">
+                <li>
+                  <a href="#about" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#what-you-gain" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                    Community
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                    Support
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex flex-col">
+              <h4 className="text-slate-900 font-bold mb-6">Support</h4>
+              <ul className="flex flex-col gap-4">
+                <li>
+                  <a href="#faq" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a href="#footer" className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-slate-200/60 flex justify-center items-center">
+          <p className="text-slate-700 text-sm font-medium">
+            © 2025 Copyright - OmahTI
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
