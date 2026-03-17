@@ -1,12 +1,23 @@
-import Navbar from "@/components/Navbar";
+import Hero from './hero';
+import About from './about';
+import Community from './community';
+import CTA from './cta';
+import FAQ from './faq';
+import Footer from './footer';
+import Partners from './partners';
+import WhatYouGain from './what-you-gain';
 
-export default function Landing() {
+export default function Page() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <h1 className="text-3xl font-medium text-center mt-20">
-       Transforming Indonesia&apos;s Brightest Minds
-      </h1>
+    <main className="bg-white min-h-screen font-sans">
+      <Hero />
+      <About />
+      <WhatYouGain />
+      <Community />
+      <Partners />
+      <FAQ />
+      <CTA />
+      <Footer />
     </main>
   );
 }
