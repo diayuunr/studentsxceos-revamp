@@ -5,8 +5,8 @@ export default function Desc() {
   return (
     <section className="w-full px-6 md:px-16 py-20 md:py-23 text-center">
     <div>
-        <h2 className="text-xl md:text-3xl font-medium mb-3">The Origin: Bridging The Gap</h2>
-        <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-20 tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-medium mb-3">The Origin: Bridging The Gap</h2>
+        <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-21 tracking-wider">
             Founded in October 2010 by students at the Institut Teknologi Bandung (ITB), StudentsxCEOs (SxC) began with a 
             fundamental question: “What comes after graduation?” Our founders realized that academic excellence alone wasn&apos;t 
             enough to navigate the complexities of the industry. They created SxC to bridge the gap between high-potential students
@@ -20,20 +20,20 @@ export default function Desc() {
               src="/heroabout-bg.jpg"
               alt="Hero"
               width={400}
-              height={500}
+              height={400}
               className="w-full h-full object-cover rounded-lg"
             />
             </div>
             <div className="w-full md:w-1/2 text-left">
                 <h3 className="text-lg md:text-2xl font-medium mt-6 mb-3">Evolution into an Accelerator</h3>
-                <p className="text-sm md:text-base font-normal max-w-5xl mx-auto font-light mb-8 tracking-wide">
+                <p className="text-sm md:text-base font-normal max-w-5xl mx-auto font-light mb-8 tracking-wider">
                     Founded in October 2010 by students at the Institut Teknologi Bandung (ITB), StudentsxCEOs (SxC) began with a 
                     fundamental question: “What comes after graduation?” Our founders realized that academic excellence alone wasn&apos;t 
                     enough to navigate the complexities of the industry. They created SxC to bridge the gap between high-potential students 
                     and the leaders currently shaping the business landscape.
                 </p>
                 <h3 className="text-lg md:text-2xl font-medium mb-3">Redefining Leadership</h3>
-                <p className="text-sm md:text-base font-normal max-w-5xl mx-auto font-light mb-7 tracking-wide">
+                <p className="text-sm md:text-base font-normal max-w-5xl mx-auto font-light mb-7 tracking-wider">
                     What started as &quot;Meet the CEO&quot; sessions has evolved into Indonesia&apos;s premier strategic leadership accelerator 
                     and think-tank. We have expanded into a nationwide network that connects selected students from reputable universities with prominent industry 
                     players. Our platform is designed to boost professional networks and expand practical knowledge through the direct exchange of ideas and experiences.
@@ -43,7 +43,7 @@ export default function Desc() {
     </div>
     <div>
         <h2 className="text-xl md:text-3xl font-medium mb-3 mt-20">Our Purpose</h2>
-        <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal mb-5 tracking-wide">
+        <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal tracking-wide">
             What started as &quot;Meet the CEO&quot; sessions has evolved into Indonesia&apos;s premier strategic leadership accelerator 
             and think-tank. We have expanded into a nationwide network that connects selected students from reputable universities with 
             prominent industry players. Our platform is designed to boost professional networks and expand practical knowledge through 

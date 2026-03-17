@@ -3,8 +3,8 @@
 import { CheckCircle } from "react-feather";
 
 export default function Vision() {
-    const missions = "flex text-left font-medium gap-4 bg-white/80 p-4 rounded-xl shadow-md"
-    const icon = "flex items-center justify-center my-auto w-7 h-7 p-1 ml-2 mr-1 rounded-md bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-600)] text-white"
+    const missions = "flex text-left font-medium gap-4 bg-[var(--color-neutral-200)] p-4 rounded-xl border-2 border-[var(--color-neutral-400)] shadow-[inset_0px_0px_10px_rgba(11,73,174,0.8)]";
+    const icon = "flex items-center justify-center my-auto w-7 h-7 p-1 ml-2 mr-1 rounded-md bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-600)] text-white shadow-[0px_0px_8px_rgba(11,73,174,1)]";
     const missionList = [
     "Attracting candidates who share the same vision and driving motivation.",
     "Building capabilities to become globally competitive business leaders.",
@@ -12,18 +12,18 @@ export default function Vision() {
     "Delivering impact through a repeatable model that creates sustainable economic value."
     ];
   return (
-    <section className="w-full px-6 md:px-16 py-20 md:py-5 text-center">
+    <section className="w-full px-6 md:px-16 py-20 md:py-0 text-center">
         <div className="relative p-[2px] rounded-[22px] bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] backdrop-blur-md w-full">
             <div className="relative justify-center h-full p-15 max-w-3xl mx-auto">
-            <h1 className="text-xl md:text-3xl font-medium mb-6 text-[var(--color-white)]">Our Vision</h1>
-            <p className="text-sm md:text-lg max-w-5xl mx-auto font-normal text-[var(--color-white)]">
+            <h1 className="text-xl md:text-3xl font-medium mb-5 text-[var(--color-white)]">Our Vision</h1>
+            <p className="text-sm md:text-lg max-w-5xl mx-auto font-light text-[var(--color-white)] tracking-wider">
                 To nurture and connect future business leaders by serving as the home of balanced and connected leaders 
                 who drive the nation toward becoming a globally advanced and developed country.
             </p>
             </div>
             <div className="relative justify-center h-full pb-15 max-w-6xl mx-auto">
-            <h1 className="text-xl md:text-3xl font-medium mb-6 text-[var(--color-white)]">Our Mission</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 p-5">
+            <h1 className="text-xl md:text-3xl font-medium mb-4 text-[var(--color-white)]">Our Mission</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-7 gap-x-4 p-5">
             {missionList.map((text, i) => (
                 <div key={i} className={missions}>
                 <div className={icon}><CheckCircle /></div>

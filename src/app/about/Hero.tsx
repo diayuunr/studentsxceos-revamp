@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-3xl mx-auto text-white">
         <p className="text-sm md:text-base font-light mt-20 md:mt-8 tracking-wide">About us</p>
         <h1 className="text-2xl md:text-3xl font-medium mt-4 glow-text tracking-wide">Transforming Indonesia&apos;s Brigthest Minds</h1>
-        <p className="text-xs md:text-lg md:max-w-xl md:text-center mx-auto font-light mt-4 tracking-wide">Connecting ambitious students with world-class business leaders to shape the future of Indonesia.</p>
+        <p className="text-xs md:text-lg md:max-w-xl md:text-center mx-auto font-light mt-4 tracking-wider">Connecting ambitious students with world-class business leaders to shape the future of Indonesia.</p>
       </div>
       {/* Hero Photo */}
       <div className="flex justify-center bg-[var(--color-white)] w-full mt-10 hidden md:flex md:items-center">

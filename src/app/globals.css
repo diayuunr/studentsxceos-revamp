@@ -7,6 +7,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-blue: #BADEEF;
+  --color-blue-thin: #F1F8FC;
 
   /* Neutral */
   --neutral-25: #FCFCFD;
@@ -35,6 +36,7 @@
 
   /* Secondary */
   --secondary-200: #70BBDD;
+  --secondary-250: #50A5A8;
   --secondary-300: #2CC0FF;
   --secondary-400: #20A9D1;
   --secondary-500: #1D8FB0;

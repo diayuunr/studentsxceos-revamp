@@ -5,6 +5,7 @@ import Vision from "./Vision";
 import Method from "./Method";
 import Values from "./Values";
 import Speaker from "./Speakers";
+import GrowthSection from "./Growth";
 
 export default function About() {
   return (
@@ -15,6 +16,7 @@ export default function About() {
       <Vision />
       <Method />
       <Values />
+      <GrowthSection />
       <Speaker />
     </main>
   );
