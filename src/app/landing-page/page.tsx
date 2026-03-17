@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function Home() {
-  const [openIndex, setOpenIndex] = useState(0);
+export default function Landing() {
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
@@ -31,9 +32,9 @@ export default function Home() {
     },
   ];
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+const toggleFAQ = (index: number) => {
+  setOpenIndex(openIndex === index ? null : index);
+};
   // === BATAS OTAK FAQ ===
 
   return (
@@ -539,9 +540,11 @@ export default function Home() {
                 key={index}
                 className="flex items-center justify-center transition-all duration-300 cursor-pointer"
               >
-                <img
+                <Image
                   src={`/${brand}.png`}
                   alt={`${brand} logo`}
+                  width={100}
+                  height={100}
                   className={`w-auto object-contain 
                     ${
                       brand.includes('pizzahut') || brand.includes('cake')
@@ -631,9 +634,11 @@ export default function Home() {
 
       <section className="max-w-full mx-auto px-4 md:px-6 py-12">
         <div className="relative rounded-[20px] px-5 py-10 md:p-15 shadow-xl overflow-hidden flex flex-col items-center">
-          <img
+          <Image
             src="/sxc-mtc-unilever.jpg"
             alt="Background Pattern"
+            width={100}
+            height={100}
             className="absolute inset-0 w-full h-full object-cover z-0 opacity-60"
           />
 
@@ -646,9 +651,9 @@ export default function Home() {
             </h2>
 
             <p className="text-white text-sm md:text-[18px] mb-8 text-center font-light max-w-2xl">
-              Whether you're a university student looking to expand your
+              Whether you&apos;re a university student looking to expand your
               network, or an organization seeking meaningful collaboration —
-              there's a place for you here.
+              there&apos;s a place for you here.
             </p>
 
             <div className="flex gap-5 mb-8">
@@ -669,9 +674,11 @@ export default function Home() {
         <div className="max-w-full mx-auto bg-linear-to-b from-[#E6F2F9] to-[#FDFDFD] rounded-[30px] pt-16 pb-8 px-8 md:px-16 flex flex-col">
           <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
             <div className="flex flex-col max-w-sm md:items-start text-left">
-              <img
+              <Image
                 src="/logo-sxc.png"
                 alt="StudentsxCEOs Logo"
+                width={100}
+                height={100}
                 className="h-10 w-auto object-contain mb-6"
               />
 
