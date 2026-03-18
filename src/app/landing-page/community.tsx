@@ -26,11 +26,11 @@ export default function Community() {
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
           {[
-            { name: 'Jakarta', file: 'jakarta.png' },
-            { name: 'Yogyakarta', file: 'yogyakarta.png' },
-            { name: 'Bandung', file: 'bandung.png' },
-            { name: 'East Java', file: 'east java.png' },
-            { name: 'Semarang', file: 'semarang.png' },
+            { name: 'Jakarta', file: 'Jakarta.png' },
+            { name: 'Yogyakarta', file: 'Yogyakarta.png' },
+            { name: 'Bandung', file: 'Bandung.png' },
+            { name: 'East Java', file: 'East Java.png' },
+            { name: 'Semarang', file: 'Semarang.png' },
           ].map((city, index) => (
             <Link href="/chapter" key={city.name} className="block">
               <motion.div
@@ -39,7 +39,7 @@ export default function Community() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 className={`relative bg-linear-to-b from-[#121926] to-[#0A3C8E] rounded-[20px] p-6 flex flex-col items-center justify-end overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-xl cursor-pointer
-          ${index === 4 ? 'col-span-2 md:col-span-1 aspect-[2/1.1] md:aspect-square' : 'aspect-square'}
+          ${index === 5 ? 'col-span-2 md:col-span-1 aspect-[2/1.1] md:aspect-square' : 'aspect-square'}
         `}
               >
                 <Image
