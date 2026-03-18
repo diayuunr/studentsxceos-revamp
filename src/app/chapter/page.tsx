@@ -28,7 +28,7 @@ export default function ChapterDetail() {
   };
 
   return (
-    <main className="min-h-screen bg-white">
+    <main id="community" className="min-h-screen bg-white">
       {/* === 1. HERO SECTION === */}
       <section className="relative w-full h-[40vh] md:h-[50vh] flex flex-col items-center justify-center overflow-hidden">
         <img
