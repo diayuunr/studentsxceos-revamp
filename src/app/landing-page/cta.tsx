@@ -40,7 +40,7 @@ export default function CTA() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="cursor-pointer flex-1 md:flex-none bg-white text-black font-medium py-2 md:py-3 px-2 md:px-8 rounded-xl drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-gray-100 transition shadow-lg text-xs md:text-base whitespace-nowrap"
+                className="cursor-pointer flex-1 md:flex-none bg-white text-black font-medium py-2 px-2 md:px-8 rounded-xl drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] hover:bg-gray-100 transition shadow-lg text-xs md:text-base whitespace-nowrap"
               >
                 Join our community
               </motion.button>
@@ -50,7 +50,7 @@ export default function CTA() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="cursor-pointer flex-1 md:flex-none bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-medium py-2 md:py-3 px-2 md:px-8 rounded-xl border border-white/20 hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
+                className="cursor-pointer flex-1 md:flex-none bg-linear-to-b from-[#121926] to-[#0A3C8E] text-white font-medium py-2 px-2 md:px-8 rounded-xl border border-white/20 hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
               >
                 Partner with us
               </motion.button>

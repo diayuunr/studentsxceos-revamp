@@ -77,7 +77,7 @@ export default function Hero() {
                 },
               }}
               transition={{ duration: 0.4 }}
-              className="relative cursor-pointer mt-10 bg-white overflow-hidden py-3 px-8 rounded-xl text-base z-0"
+              className="relative cursor-pointer mt-10 bg-white overflow-hidden py-2 px-8 rounded-xl text-base z-0"
             >
               <motion.div
                 variants={{
