@@ -26,12 +26,14 @@ function useIsMobile() {
   return isMobile;
 }
 
+const MotionLink = motion(Link);
+
 export default function Partners() {
   const isMobile = useIsMobile();
   const logoRows = chunkArray(logos, isMobile ? 8 : 9);
 
   return (
-    <section className="w-full px-6 md:px-16 py-15 md:py-10 text-center mb-3">
+    <section id="partners" className="w-full px-6 md:px-16 py-15 md:py-10 text-center mb-3">
       
       <motion.div
         initial="hidden"
@@ -72,59 +74,58 @@ export default function Partners() {
       </motion.div>
 
       <motion.div>
-        <Link href="/support" passHref legacyBehavior>
-          <motion.a
-            initial="initial"
-            whileHover="hover"
+        <MotionLink
+          href="/support"
+          initial="initial"
+          whileHover="hover"
+          variants={{
+            initial: {
+              boxShadow: '0 0 10px rgba(10, 60, 142, 0.2)',
+            },
+            hover: {
+              boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+            },
+          }}
+          transition={{ duration: 0.4 }}
+          className="relative inline-block cursor-pointer mt-6 mb-6 bg-gradient-to-br from-[#121926] to-[#0A3C8E] overflow-hidden py-2 px-8 rounded-xl text-base z-0 border border-black"
+        >
+          <motion.div
             variants={{
-              initial: {
-                boxShadow: '0 0 10px rgba(10, 60, 142, 0.2)',
-              },
-              hover: {
-                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-              },
+              initial: { scaleX: 0 },
+              hover: { scaleX: 1.1 },
             }}
-            transition={{ duration: 0.4 }}
-            className="relative inline-block cursor-pointer mt-6 mb-6 bg-gradient-to-br from-[#121926] to-[#0A3C8E] overflow-hidden py-2 px-8 rounded-xl text-base z-0 border border-black"
-          >
-            <motion.div
-              variants={{
-                initial: { scaleX: 0 },
-                hover: { scaleX: 1.1 },
-              }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
-              style={{ originX: 0, willChange: 'transform' }}
-              className="absolute inset-0 bg-white -z-10"
-            />
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            style={{ originX: 0 }}
+            className="absolute inset-0 bg-white -z-10"
+          />
 
-            <motion.span
+          <motion.span
+            variants={{
+              initial: { color: '#ffffff' },
+              hover: { color: '#000000' },
+            }}
+            className="relative z-10 font-medium flex flex-row items-center gap-2"
+          >
+            Learn more
+            <motion.svg
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
               variants={{
-                initial: { color: '#ffffff' },
-                hover: { color: '#000000' },
+                initial: { stroke: '#ffffff' },
+                hover: { stroke: '#000000' },
               }}
-              className="relative z-10 font-medium flex flex-row items-center gap-2"
+              transition={{ duration: 0.4 }}
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              Learn more
-              <motion.svg
-                width="25"
-                height="25"
-                viewBox="0 0 24 24"
-                fill="none"
-                variants={{
-                  initial: { stroke: '#ffffff' },
-                  hover: { stroke: '#000000' },
-                }}
-                transition={{ duration: 0.4 }}
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="8" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </motion.svg>
-            </motion.span>
-          </motion.a>
-        </Link>
+              <line x1="8" y1="17" x2="17" y2="7" />
+              <polyline points="7 7 17 7 17 17" />
+            </motion.svg>
+          </motion.span>
+        </MotionLink>
       </motion.div>
 
       {logoRows.map((row, i) => (
