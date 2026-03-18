@@ -7,7 +7,7 @@ export default function About() {
     initial: { opacity: 0, y: 40 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.7, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: 'easeOut' as const },
   };
 
   return (
@@ -17,13 +17,13 @@ export default function About() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <motion.div {...fadeInUp} className="pr-4 text-center md:text-left">
-          <p className="text-[18px] font-semibold text-gray-800 mb-4 tracking-tight lowercase">
+          <p className="text-[18px] font-mediumtext-gray-800 mb-4 tracking-tight lowercase">
             about us
           </p>
-          <h3 className="text-[26px] md:text-[30px] font-bold mb-6 tracking-tight text-black">
+          <h3 className="text-[26px] md:text-[30px] font-medium mb-6 text-black tracking-wide">
             Bridging Students to Real-World Leadership
           </h3>
-          <p className="text-gray-600 leading-relaxed font-light text-[18px]">
+          <p className="text-gray-600 leading-relaxed font-normal text-[18px]">
             StudentsxCEOs (SxC) is a strategic leadership platform for
             university students that connects them directly with industry
             leaders through curated talks, leadership forums, mentoring

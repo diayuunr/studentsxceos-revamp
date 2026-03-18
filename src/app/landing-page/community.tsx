@@ -8,17 +8,17 @@ export default function Community() {
     initial: { opacity: 0, y: 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: 'easeOut' as const },
   }; 
 
   return (
-    <section className="w-full bg-linear-to-b from-white via-[#E6F2F9] to-white px-6 py-20">
+    <section id="community" className="w-full bg-linear-to-b from-white via-[#E6F2F9] to-white px-6 py-20">
       <div className="max-w-7xl mx-auto">
         <motion.div {...fadeInUp} className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 mb-4 tracking-wide">
             Explore Our Community
           </h2>
-          <p className="text-gray-600 text-sm md:text-base font-light">
+          <p className="text-gray-600 text-sm md:text-base font-normal tracking-wide">
             Each chapter develops its own initiatives and programs, under the
             shared values of SXC.
           </p>
@@ -75,7 +75,7 @@ export default function Community() {
                   />
                 </div>
 
-                <h3 className="relative z-10 text-white font-bold text-lg tracking-wide mt-2 text-center">
+                <h3 className="relative z-10 text-white font-medium text-lg tracking-wide mt-2 text-center">
                   {city.name}
                 </h3>
 

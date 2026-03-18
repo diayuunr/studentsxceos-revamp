@@ -6,10 +6,12 @@ import FAQ from './faq';
 import Footer from './footer';
 import Partners from './partners';
 import WhatYouGain from './what-you-gain';
+import Navbar from './navbar';
 
 export default function Page() {
   return (
-    <main className="bg-white min-h-screen font-sans">
+    <main className="bg-white min-h-screen">
+      <Navbar />
       <Hero />
       <About />
       <WhatYouGain />

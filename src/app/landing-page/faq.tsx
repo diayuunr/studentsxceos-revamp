@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqs = [
     {
@@ -24,7 +24,7 @@ export default function FAQ() {
     }
   ];
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -37,7 +37,7 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-slate-900 mb-10 tracking-tight text-center"
+          className="text-3xl md:text-4xl font-medium text-slate-900 mb-10 tracking-wide text-center"
         >
           Frequently Asked Questions
         </motion.h2>
@@ -60,7 +60,7 @@ export default function FAQ() {
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex justify-between items-center p-6">
-                  <h3 className="font-semibold text-slate-900 text-base md:text-lg pr-8">
+                  <h3 className="font-medium tracking-wide text-slate-900 text-base md:text-lg pr-8">
                     {faq.question}
                   </h3>
 
@@ -84,7 +84,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <div className="px-6 pb-6">
-                        <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                        <p className="text-slate-600 text-sm md:text-base font-normal tracking-wide">
                           {faq.answer}
                         </p>
                       </div>

@@ -1,10 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Partners() {
   return (
-    <section className="w-full bg-white px-6 py-24">
+    <section id="partners" className="w-full bg-white px-6 py-24">
       <div className="text-center mb-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,10 +13,10 @@ export default function Partners() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2 tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 mb-2 tracking-wide">
             We Trusted by Our Partner
           </h2>
-          <p className="text-black text-sm md:text-base font-light">
+          <p className="text-black text-sm md:text-base font-normal tracking-wide">
             Each chapter develops its own initiatives and programs, under the
             shared values of SXC.
           </p>
@@ -57,7 +58,7 @@ export default function Partners() {
                 initial: { color: '#ffffff' },
                 hover: { color: '#000000' },
               }}
-              className="relative z-10 font-bold flex flex-row"
+              className="relative z-10 font-medium flex flex-row"
             >
               Learn more
               <motion.svg
@@ -112,9 +113,11 @@ export default function Partners() {
               whileHover={{ scale: 1.1 }}
               className="flex items-center justify-center cursor-pointer"
             >
-              <img
+              <Image
                 src={`/${brand}.png`}
                 alt={`${brand} logo`}
+                width={100}
+                height={100}
                 className={`w-auto object-contain ${
                   brand.includes('pizzahut') || brand.includes('cake')
                     ? 'h-14 md:h-20'
