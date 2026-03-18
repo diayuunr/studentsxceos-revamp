@@ -29,7 +29,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="w-full bg-white px-6 py-24">
+    <section id="faq" className="w-full bg-white px-6 py-10">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         
         <motion.h2 

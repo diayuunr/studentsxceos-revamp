@@ -98,7 +98,7 @@ export default function About() {
               },
             }}
             transition={{ duration: 0.4 }}
-            className="relative cursor-pointer mt-6 mb-6 bg-linear-to-br from-[#121926] to-[#0A3C8E] overflow-hidden py-3 px-8 rounded-xl text-base z-0 border border-black"
+            className="relative cursor-pointer mt-6 mb-6 bg-linear-to-br from-[#121926] to-[#0A3C8E] overflow-hidden py-2 px-8 rounded-xl text-base z-0 border border-black"
           >
             <motion.div
               variants={{
@@ -115,7 +115,7 @@ export default function About() {
                 initial: { color: '#ffffff' },
                 hover: { color: '#000000' },
               }}
-              className="relative z-10 font-bold flex flex-row"
+              className="relative z-10 font-medium flex flex-row"
             >
               Learn more
               <motion.svg
