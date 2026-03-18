@@ -18,6 +18,8 @@
 
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-blue: #BADEEF;
+  --color-green: #50A5A8;
 
   /* Neutral */
   --neutral-25: #FCFCFD;
@@ -45,6 +47,7 @@
   --primary-900: #07152F;
 
   /* Secondary */
+  --secondary-200: #70BBDD;
   --secondary-300: #2CC0FF;
   --secondary-400: #20A9D1;
   --secondary-500: #1D8FB0;
@@ -76,6 +79,30 @@ body {
   background: var(--color-white);
   color: var(--neutral-900);
   margin: 0;
+}
+
+.glow-text {
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.305),
+    0 0 24px rgba(255, 255, 255, 0.4);
+}
+
+/* Marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 25s linear infinite;
 }
 
 html {
