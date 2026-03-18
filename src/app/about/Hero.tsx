@@ -5,7 +5,7 @@ import { motion, easeOut } from "framer-motion";
 export default function Hero() {
   return (
     <motion.section
-      className="relative w-full h-screen md:h-[calc(100vh+100px)] px-6 md:px-16 py-20 md:py-28 text-center rounded-b-2xl overflow-hidden"
+      className="relative w-full min-h-[75vh] md:h-[calc(100vh+100px)] px-6 md:px-16 py-20 md:py-28 text-center rounded-b-2xl overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: easeOut }}
@@ -13,19 +13,20 @@ export default function Hero() {
       {/* Hero Image */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
 
-        <motion.div
-          className="w-full h-full"
-          initial={{ scale: 1.2 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: easeOut }}
-        >
+      <motion.div
+        className="relative w-full h-full overflow-hidden"
+        initial={{ scale: 1.2 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: easeOut }}
+      >
         <Image
           src="/heroabout-bg.jpg"
           alt="Hero"
           fill
-          className="w-full object-top scale-100 h-[50%] md:h-full"
+          priority
+          className="object-cover object-top !h-full !w-full"
         />
-        </motion.div>
+      </motion.div>
 
       <motion.div
         className="absolute top-0 left-0 w-full h-full md:h-full bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] opacity-97"
