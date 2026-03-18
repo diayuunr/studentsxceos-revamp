@@ -12,7 +12,7 @@ export default function Navbar() {
   const navLink = "relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:w-0 after:origin-center after:h-[1px] after:bg-[var(--neutral-900)] after:transition-all after:duration-300 hover:after:w-full";
 
   return (
-    <nav className="fixed w-full z-50 px-9 py-8 transition-shadow">
+    <nav className="fixed w-full z-50 px-5 md:px-9 py-8 transition-shadow">
       <div className="mx-auto max-w-[98rem] rounded-2xl bg-[var(--color-white)] px-6 py-2 shadow-sm">
         
         <div className="relative flex items-center justify-between">
@@ -56,10 +56,10 @@ export default function Navbar() {
         {/* MOBILE MENU */}
         {open && (
           <div className="mt-3 flex flex-col gap-1.5 text-sm justify-items-center items-center md:hidden">
-            <a href="/about">About</a>
-            <a href="/community">Community</a>
-            <a href="/support">Support</a>
-            <a href="/faqs">FAQs</a>
+            <a href="#about">About</a>
+            <a href="#community">Community</a>
+            <a href="#partners">Support</a>
+            <a href="#faq">FAQs</a>
           </div>
         )}
 
