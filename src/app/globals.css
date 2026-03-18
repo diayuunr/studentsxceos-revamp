@@ -20,6 +20,7 @@
   --color-black: #000000;
   --color-blue: #BADEEF;
   --color-blue-thin: #F1F8FC;
+  --color-green: #50A5A8;
 
   /* Neutral */
   --neutral-25: #FCFCFD;
@@ -87,6 +88,25 @@ body {
     0 0 6px rgba(255, 255, 255, 0.305),
     0 0 24px rgba(255, 255, 255, 0.4);
 }
+
+/* Marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 25s linear infinite;
+}
+
 html {
   scroll-behavior: smooth;
 }

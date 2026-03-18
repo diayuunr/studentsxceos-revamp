@@ -9,11 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "framer-motion": "^12.36.0",
+=======
+    "framer-motion": "^12.38.0",
+>>>>>>> df08600e602e9fa0cbd1d2792ff5d31617a071d8
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-feather": "^2.0.10"
+    "react-feather": "^2.0.10",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
