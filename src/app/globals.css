@@ -2,10 +2,25 @@
 
 :root {
 
+  @theme {
+
+  --animate-marquee: marquee 10s linear infinite;
+
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+
   /* COLORS */
 
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-blue: #BADEEF;
+  --color-blue-thin: #F1F8FC;
+  --color-green: #50A5A8;
 
   /* Neutral */
   --neutral-25: #FCFCFD;
@@ -33,6 +48,8 @@
   --primary-900: #07152F;
 
   /* Secondary */
+  --secondary-200: #70BBDD;
+  --secondary-250: #50A5A8;
   --secondary-300: #2CC0FF;
   --secondary-400: #20A9D1;
   --secondary-500: #1D8FB0;
@@ -64,4 +81,32 @@ body {
   background: var(--color-white);
   color: var(--neutral-900);
   margin: 0;
+}
+
+.glow-text {
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.305),
+    0 0 24px rgba(255, 255, 255, 0.4);
+}
+
+/* Marquee */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 25s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -32,10 +32,10 @@ export default function Programs() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="text-center mb-10"
       >
-        <h2 className="text-2xl md:text-3xl font-semibold bg-linear-to-b from-[#0A1325] to-[#0A3C8E] bg-clip-text text-transparent mb-2">
+        <h2 className="text-2xl md:text-3xl font-medium tracking-wide bg-linear-to-b from-[#0A1325] to-[#0A3C8E] bg-clip-text text-transparent mb-2">
           Programs
         </h2>
-        <p className="text-slate-600 text-sm md:text-base font-light max-w-2xl text-center">
+        <p className="text-sm md:text-base font-light tracking-wider max-w-2xl text-center">
           Each chapter develops its own initiatives and programs, under the shared values of SXC.
         </p>
       </motion.div>

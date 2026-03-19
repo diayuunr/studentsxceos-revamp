@@ -25,8 +25,8 @@ export default function Universities() {
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <h2 className="text-2xl md:text-[32px] font-bold text-[#333333] mb-2">University Reached</h2>
-        <p className="text-slate-600 text-sm md:text-base font-light text-center">
+        <h2 className="text-2xl md:text-[32px] font-medium mb-2 tracking-wide">University Reached</h2>
+        <p className="text-sm md:text-base font-light text-center tracking-wider">
           Each chapter develops its own initiatives and programs, under the shared values of SXC.
         </p>
       </motion.div>

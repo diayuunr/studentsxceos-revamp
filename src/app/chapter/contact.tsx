@@ -31,9 +31,9 @@ export default function Contact() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center md:text-left"
         >
-          <h2 className="text-[26px] font-bold text-[#333333] mb-4">Connect with us</h2>
-          <p className="text-slate-600 mb-8 max-w-sm mx-auto md:mx-0">
-            We're always looking to connect with those who share an interest in our community.
+          <h2 className="text-[26px] font-medium text-[#333333] mb-4">Connect with us</h2>
+          <p className="mb-8 max-w-lg mx-auto md:mx-0 tracking-wider">
+            We&apos;re always looking to connect with those who share an interest in our community.
           </p>
           <div className="flex justify-center md:justify-start gap-4">
             {socialMedia.map((social, index) => (
@@ -66,11 +66,11 @@ export default function Contact() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-linear-to-b from-[#0A1325] to-[#0A3C8E] rounded-3xl p-8 md:p-10 shadow-2xl"
+          className="bg-linear-to-b from-[#0A1325] to-[#0A3C8E] rounded-3xl p-8 md:p-8 shadow-2xl"
         >
-          <h3 className="text-2xl font-bold text-white mb-4">Contact us</h3>
-          <p className="text-white/80 text-sm md:text-base mb-8 font-light">
-            We're always looking to connect with those who share an interest in our community.
+          <h3 className="text-2xl font-medium text-white mb-4">Contact us</h3>
+          <p className="text-white/80 text-sm md:text-base mb-8 font-light tracking-wider">
+            We&apos;re always looking to connect with those who share an interest in our community.
           </p>
           
           <a href="mailto:mail@studentsxceos.org">

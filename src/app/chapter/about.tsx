@@ -11,7 +11,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="text-2xl md:text-[32px] font-bold text-slate-900 mb-6"
+          className="text-2xl md:text-[32px] font-medium tracking-wide text-slate-900 mb-6"
         >
           A Growing Leadership Platform
         </motion.h2>
@@ -21,12 +21,12 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          className="text-slate-600 leading-relaxed text-sm md:text-[18px]"
+          className="leading-relaxed tracking-wide text-sm md:text-[18px]"
         >
           SxC East Java connects ambitious students with industry leaders
           through curated discussions, executive sessions, and strategic
           initiatives. Operating across key academic hubs in{' '}
-          <strong className="text-slate-800">
+          <strong className="font-medium">
             Surabaya, Malang, Kediri, Madiun, and Jember
           </strong>
           . By uniting diverse academic backgrounds, SxC East Java creates

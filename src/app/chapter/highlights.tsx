@@ -17,7 +17,7 @@ export default function Highlights() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-xl md:text-[32px] font-bold text-slate-900 mb-8"
+          className="text-xl md:text-[32px] font-medium tracking-wide text-slate-900 mb-8"
         >
           Chapter Highlights
         </motion.h3>
@@ -32,7 +32,7 @@ export default function Highlights() {
               transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
               className="shadow-md shadow-black/10 bg-linear-to-b from-[#E6F2F9] to-[#FDFDFD] border border-[#E3E8EF]/200 rounded-2xl p-6 flex flex-col items-center justify-center hover:-translate-y-2 hover:shadow-lg transition-all duration-300"
             >
-              <span className="text-slate-600 text-sm md:text-[20px] mb-1 font-light">
+              <span className="text-sm md:text-[20px] mb-1 font-light">
                 {stat.label}
               </span>
               <span className="text-2xl md:text-[38px] font-semibold bg-linear-to-b from-[#0A1325] to-[#0A3C8E] bg-clip-text text-transparent">
