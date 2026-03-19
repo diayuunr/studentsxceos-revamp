@@ -53,10 +53,10 @@ const GrowthSection = () => {
 
         {/* LINE */}
         {/* Desktop (horizontal) */}
-        <div className="hidden md:block absolute top-3 left-0 w-full h-[5px] bg-gradient-to-r from-[var(--color-blue)] to-[var(--color-white)]" />
+        <div className="hidden md:block absolute top-3 left-0 w-full h-[5px] bg-gradient-to-r from-[var(--color-blue)] to-[var(--color-blue-thin)] rounded-full" />
 
         {/* Mobile (vertical) */}
-        <div className="block md:hidden absolute top-0 left-5 w-[5px] h-full bg-gradient-to-b from-[var(--color-blue)] to-[var(--color-white)]" />
+        <div className="block md:hidden absolute top-0 left-5 w-[5px] h-full bg-gradient-to-b from-[var(--color-blue)] to-[var(--color-blue-thin)] rounded-full" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
             {timelineData.map((item, index) => (
@@ -71,7 +71,7 @@ const GrowthSection = () => {
                 {/* DOT + GLOW */}
                 <div className="relative md:mb-12 mt-1 md:mt-0 md:ml-0">
                 {/* glow */}
-                <div className="mt-15 md:mt-0 absolute inset-0 rounded-full bg-[var(--secondary-250)] blur-md opacity-70 scale-150" />
+                <div className="mt-15 md:mt-0 absolute inset-0 rounded-full bg-[var(--secondary-250)] blur-md opacity-60 scale-100 ml-2.5 md:ml-0 md:scale-125" />
 
                 {/* dot */}
                 <div className="relative w-6 h-6 bg-[var(--color-blue)] rounded-full border-[3.5] border-[var(--neutral-200)] ml-2.5 mt-15 md:mt-0 md:ml-0 shadow-md" />

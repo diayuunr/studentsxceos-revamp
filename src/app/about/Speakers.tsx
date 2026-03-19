@@ -1,45 +1,29 @@
 'use client';
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { speakers } from "@/data/Speakers";
 
-const speakers = [
-  {
-    title: "Eka Nilam Dari",
-    description: "Director of ShopeePay",
-    image: "/eka.png"
-  },
-  {
-    title: "Eka Nilam Dari",
-    description: "Director of ShopeePay",
-    image: "/eka.png"
-  },
-  {
-    title: "Eka Nilam Dari",
-    description: "Director of ShopeePay",
-    image: "/eka.png"
-  },
-  {
-    title: "Eka Nilam Dari",
-    description: "Director of ShopeePay",
-    image: "/eka.png"
-  },
-  {
-    title: "Eka Nilam Dari",
-    description: "Director of ShopeePay",
-    image: "/eka.png"
-  },
-  {
-    title: "Eka Nilam Dari",
-    description: "Director of ShopeePay",
-    image: "/eka.png"
-  },
-];
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 768px)");
+    const listener = () => setIsMobile(media.matches);
+
+    listener();
+    media.addEventListener("change", listener);
+
+    return () => media.removeEventListener("change", listener);
+  }, []);
+
+  return isMobile;
+}
 
 export default function Speakers() {
   const [expanded, setExpanded] = useState(false);
-
-  const visibleSpeakers = expanded ? speakers : speakers.slice(0, 4);
+  const isMobile = useIsMobile();
+  const visibleSpeakers = expanded ? speakers : speakers.slice(0, isMobile ? 4 : 12);
 
   return (
     <section className="w-full px-5 md:px-16 py-5 md:py-10 text-center">
@@ -66,7 +50,7 @@ export default function Speakers() {
       </motion.p>
 
       <div className="flex justify-center">
-        <motion.div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
+        <motion.div className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
 
           <AnimatePresence>
             {visibleSpeakers.map((speaker, i) => (
@@ -93,7 +77,7 @@ export default function Speakers() {
                   />
                 </div>
 
-                <div className="border border-[var(--color-neutral-200)] rounded-xl px-8 md:px-2 py-2 text-center shadow-xs">
+                <div className="border border-[var(--color-neutral-200)] rounded-xl px-8 md:px-5 py-2 text-center shadow-xs">
                   <h2 className="text-md md:text-lg font-medium">
                     {speaker.title}
                   </h2>

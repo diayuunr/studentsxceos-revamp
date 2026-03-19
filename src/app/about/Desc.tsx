@@ -18,7 +18,7 @@ export default function Desc() {
       transition={{ duration: 0.7, ease: easeOut }}
       viewport={{ once: true }}
     >
-        <h2 className="text-xl md:text-3xl font-medium md:mb-3">The Origin: Bridging The Gap</h2>
+        <h2 className="text-xl md:text-3xl font-medium mb-3">The Origin: Bridging The Gap</h2>
         <p className="text-sm md:text-lg max-w-5xl mx-auto font-light md:font-normal mb-10 md:mb-21 tracking-wider">
             Founded in October 2010 by students at the Institut Teknologi Bandung (ITB), StudentsxCEOs (SxC) began with a 
             fundamental question: “What comes after graduation?” Our founders realized that academic excellence alone wasn&apos;t 
