@@ -3,13 +3,35 @@
 import { Menu, X } from "react-feather";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
+  const ignoreScroll = useRef(false);
+
   const activeNav = "font-medium text-[var(--primary-600)] drop-shadow after:hidden"
   const navLink = "relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:w-0 after:origin-center after:h-[1px] after:bg-[var(--neutral-900)] after:transition-all after:duration-300 hover:after:w-full";
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      if (ignoreScroll.current) return;
+
+      const currentScrollY = window.scrollY;
+
+      if (Math.abs(currentScrollY - lastScrollY) > 5) {
+        setActive("");
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav className="fixed w-full z-50 px-5 md:px-9 py-8 transition-shadow">
@@ -17,33 +39,83 @@ export default function Navbar() {
         
         <div className="relative flex items-center justify-between">
 
-          {/* LEFT - LOGO */}
-          <div className="flex items-center">
-            <Image
-              src="/logo-sxc.png"
-              alt="StudentsxCEOs Logo"
-              width={40}
-              height={40}
+          {/* LOGO */}
+          <Link href="/">
+            <div className="flex items-center">
+              <Image
+                src="/logo-sxc.png"
+                alt="StudentsxCEOs Logo"
+                width={40}
+                height={40}
             />
-          </div>
+          </div></Link>
 
-          {/* CENTER - MENU */}
+          {/* MENU */}
           <div className="absolute left-1/2 -translate-x-1/2 hidden md:flex items-center gap-10 text-base font-normal">
-            <Link href="#about" onClick={() => setActive("about")} className={`${navLink} ${active === "about" ? activeNav : ""}`}>
+            
+            <Link href="/#about"
+              onClick={(e) => {
+                e.preventDefault();
+                ignoreScroll.current = true;
+                document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+                setActive("about");
+
+                setTimeout(() => {
+                  ignoreScroll.current = false;
+                }, 5000);
+              }}
+              className={`${navLink} ${active === "about" ? activeNav : ""}`}>
               About
             </Link>
-            <Link href="#community" onClick={() => setActive("community")} className={`${navLink} ${active === "community" ? activeNav : ""}`}>
+
+            <Link href="/#community"
+              onClick={(e) => {
+                e.preventDefault();
+                ignoreScroll.current = true;
+                document.getElementById("community")?.scrollIntoView({ behavior: "smooth" });
+                setActive("community");
+
+                setTimeout(() => {
+                  ignoreScroll.current = false;
+                }, 5000);
+              }}
+              className={`${navLink} ${active === "community" ? activeNav : ""}`}>
               Community
             </Link>
-            <Link href="#partners" onClick={() => setActive("partners")} className={`${navLink} ${active === "partners" ? activeNav : ""}`}>
+
+            <Link href="/#partners"
+              onClick={(e) => {
+                e.preventDefault();
+                ignoreScroll.current = true;
+                document.getElementById("partners")?.scrollIntoView({ behavior: "smooth" });
+                setActive("partners");
+
+                setTimeout(() => {
+                  ignoreScroll.current = false;
+                }, 5000);
+              }}
+              className={`${navLink} ${active === "partners" ? activeNav : ""}`}>
               Support
             </Link>
-            <Link href="#faq" onClick={() => setActive("faqs")} className={`${navLink} ${active === "faqs" ? activeNav : ""}`}>
+
+            <Link href="/#faq"
+              onClick={(e) => {
+                e.preventDefault();
+                ignoreScroll.current = true;
+                document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+                setActive("faq");
+
+                setTimeout(() => {
+                  ignoreScroll.current = false;
+                }, 5000);
+              }}
+              className={`${navLink} ${active === "faq" ? activeNav : ""}`}>
               FAQs
             </Link>
+
           </div>
 
-          {/* RIGHT - HAMBURGER */}
+          {/* HAMBURGER */}
           <button
             className="md:hidden"
             onClick={() => setOpen(!open)}
@@ -53,13 +125,13 @@ export default function Navbar() {
 
         </div>
 
-        {/* MOBILE MENU */}
+        {/* MOBILE */}
         {open && (
-          <div className="mt-3 flex flex-col gap-1.5 text-sm justify-items-center items-center md:hidden">
-            <a href="#about">About</a>
-            <a href="#community">Community</a>
-            <a href="#partners">Support</a>
-            <a href="#faq">FAQs</a>
+          <div className="mt-3 flex flex-col gap-2 mb-3 text-md tracking-wide justify-items-center items-center md:hidden">
+            <Link href="/#about">About</Link>
+            <Link href="/#community">Community</Link>
+            <Link href="/#partners">Support</Link>
+            <Link href="/#faq">FAQs</Link>
           </div>
         )}
 
