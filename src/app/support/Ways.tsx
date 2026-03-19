@@ -21,6 +21,16 @@ const values = [
         icon: <Heart/>
     },
 ]
+
+const handleScroll = (id: string) => {
+
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${id}`;
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+};
+
   return (
     <section className="w-full px-6 md:px-16 py-20 md:py-5 md:mb-20 text-center md:bg-none bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] backdrop-blur-md">
         <motion.div
@@ -86,6 +96,7 @@ const values = [
 
                 <div className="mt-auto">
                 <motion.button
+                    onClick={() => handleScroll("community")}
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.97 }}
                     transition={{ type: "spring", stiffness: 300, damping: 18 }}

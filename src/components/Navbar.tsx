@@ -11,7 +11,7 @@ export default function Navbar() {
   const [active, setActive] = useState("");
   const pathname = usePathname();
   const activeNav = "font-medium text-[var(--primary-600)] drop-shadow after:hidden"
-  const navLink = "relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:w-0 after:origin-center after:h-[1px] after:bg-[var(--neutral-900)] after:transition-all after:duration-300 hover:after:w-full";
+  const navLink = "cursor-pointer relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-1 after:w-0 after:origin-center after:h-[1px] after:bg-[var(--neutral-900)] after:transition-all after:duration-300 hover:after:w-full";
   const handleScroll = (id: string) => {
     setActive(id);
 
