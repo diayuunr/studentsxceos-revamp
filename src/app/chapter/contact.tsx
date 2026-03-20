@@ -21,7 +21,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="w-full bg-[#E6F2F9] px-6 py-16 md:py-24 overflow-hidden">
+    <section className="w-full bg-[#E6F2F9] px-8 py-16 md:py-24 overflow-hidden sm:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
         
         <motion.div 
@@ -68,7 +68,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="bg-linear-to-b from-[#0A1325] to-[#0A3C8E] rounded-3xl p-8 md:p-8 shadow-2xl"
         >
-          <h3 className="text-2xl font-medium text-white mb-4">Contact us</h3>
+          <h3 className="text-center md:text-start text-2xl font-medium text-white mb-4">Contact us</h3>
           <p className="text-white/80 text-sm md:text-base mb-8 font-light tracking-wider">
             We&apos;re always looking to connect with those who share an interest in our community.
           </p>

@@ -6,7 +6,7 @@ export default function Highlights() {
     { label: "Established", value: "2010" },
     { label: "Members", value: "70+" },
     { label: "Programs", value: "10+" },
-    { label: "Established", value: "2010" },
+    { label: "Universities", value: "40+" },
   ];
 
   return (

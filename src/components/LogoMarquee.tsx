@@ -25,7 +25,7 @@ export default function LogoMarquee({
       <div
         className="flex w-max gap-0 md:gap-10 will-change-transform"
         style={{
-            animation: `marquee ${speed}s linear infinite`,
+            animation: `marquee-logos ${speed}s linear infinite`,
             animationDirection: direction === "right" ? "reverse" : "normal",
         }}
       >
