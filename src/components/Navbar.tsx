@@ -107,16 +107,16 @@ export default function Navbar() {
         {/* MOBILE MENU */}
         {open && (
           <div className="mt-3 flex flex-col gap-2 mb-3 text-md tracking-wide justify-items-center items-center md:hidden">
-            <button onClick={() => handleScroll("about")}>
+            <button onClick={() => { handleScroll("about"); setOpen(false); }}>
               About
             </button>
-            <button onClick={() => handleScroll("community")}>
+            <button onClick={() => { handleScroll("community"); setOpen(false); }}>
               Community
             </button>
-            <button onClick={() => handleScroll("support")}>
+            <button onClick={() => { handleScroll("support"); setOpen(false); }}>
               Support
             </button>
-            <button onClick={() => handleScroll("faq")}>
+            <button onClick={() => { handleScroll("faq"); setOpen(false); }}>
               FAQs
             </button>
           </div>

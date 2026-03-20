@@ -128,10 +128,18 @@ export default function Navbar() {
         {/* MOBILE */}
         {open && (
           <div className="mt-3 flex flex-col gap-2 mb-3 text-md tracking-wide justify-items-center items-center md:hidden">
-            <Link href="/#about">About</Link>
-            <Link href="/#community">Community</Link>
-            <Link href="/#partners">Support</Link>
-            <Link href="/#faq">FAQs</Link>
+            <Link href="/#about" onClick={() => setOpen(false)}>
+              About
+            </Link>
+            <Link href="/#community" onClick={() => setOpen(false)}>
+              Community
+            </Link>
+            <Link href="/#partners" onClick={() => setOpen(false)}>
+              Support
+            </Link>
+            <Link href="/#faq" onClick={() => setOpen(false)}>
+              FAQs
+            </Link>
           </div>
         )}
 
