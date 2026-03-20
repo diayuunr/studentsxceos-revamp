@@ -40,8 +40,8 @@ export default function About() {
           >
             <div className="absolute top-0 left-0 w-24 md:w-100 h-full bg-linear-to-r from-white to-transparent z-10 pointer-events-none"></div>
 
-            <div className="flex w-full animate-marquee">
-              <div className="flex gap-8 md:gap-16 min-w-full shrink-0 justify-around px-8">
+            <div className="flex w-full animate-marquee-stats">
+              <div className="flex gap-4 md:gap-16 min-w-full shrink-0 justify-around px-2 md:px-8" >
                 {[
                   { label: 'Years', value: '20+' },
                   { label: 'Programs', value: '100' },
@@ -59,7 +59,7 @@ export default function About() {
                 ))}
               </div>
 
-              <div className="flex gap-8 md:gap-16 shrink-0 min-w-full justify-around px-8">
+              <div className="flex gap-4 md:gap-16 shrink-0 min-w-full justify-around px-2 md:px-8">
                 {[
                   { label: 'Years', value: '20+' },
                   { label: 'Programs', value: '100' },

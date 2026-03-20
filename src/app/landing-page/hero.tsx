@@ -64,7 +64,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut' as const }}
         >
-          <Link href="/chapter">
+          <a href="#community">
             <motion.button
               initial="initial"
               whileHover="hover"
@@ -99,7 +99,7 @@ export default function Hero() {
                 Join our community
               </motion.span>
             </motion.button>
-          </Link>
+          </a>
         </motion.div>
       </div>
     </div>
