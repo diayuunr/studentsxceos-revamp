@@ -69,7 +69,7 @@ export default function Contact() {
           className="bg-linear-to-b from-[#0A1325] to-[#0A3C8E] rounded-3xl p-8 md:p-8 shadow-2xl"
         >
           <h3 className="text-center md:text-start text-2xl font-medium text-white mb-4">Contact us</h3>
-          <p className="text-white/80 text-sm md:text-base mb-8 font-light tracking-wider">
+          <p className="text-center md:text-start text-white/80 text-sm md:text-base mb-8 font-light tracking-wider">
             We&apos;re always looking to connect with those who share an interest in our community.
           </p>
           

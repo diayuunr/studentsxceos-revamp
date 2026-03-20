@@ -26,7 +26,7 @@ export default function Speakers() {
   const visibleSpeakers = expanded ? speakers : speakers.slice(0, isMobile ? 4 : 12);
 
   return (
-    <section className="w-full px-5 md:px-16 py-5 md:py-10 text-center">
+    <section className="w-full px-5 md:px-16 py-5 mb-5 md:py-10 text-center">
 
       {/* TITLE */}
       <motion.h1 

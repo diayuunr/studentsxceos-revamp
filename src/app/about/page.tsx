@@ -6,6 +6,7 @@ import Method from "./Method";
 import Values from "./Values";
 import Speaker from "./Speakers";
 import GrowthSection from "./Growth";
+import Footer from "./footer";
 
 export default function About() {
   return (
@@ -18,6 +19,7 @@ export default function About() {
       <Values />
       <GrowthSection />
       <Speaker />
+      <Footer />
     </main>
   );
 }

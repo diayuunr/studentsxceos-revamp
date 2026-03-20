@@ -4,6 +4,7 @@ import Partners from "./Partners";
 import Why from "./Why";
 import Ways from "./Ways";
 import Medpart from "./Medpart";
+import Footer from "./footer";
 
 export default function About() {
   return (
@@ -14,6 +15,7 @@ export default function About() {
       <Why />
       <Medpart />
       <Ways />
+      <Footer />
     </main>
   );
 }

@@ -32,7 +32,7 @@ const handleScroll = (id: string) => {
 };
 
   return (
-    <section className="w-full px-6 md:px-16 py-20 md:py-5 md:mb-20 text-center md:bg-none bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] backdrop-blur-md">
+    <section className="w-full px-6 md:px-16 py-20 pb-5 md:py-5 mb-20 text-center md:bg-none bg-gradient-to-b from-[var(--neutral-900)] to-[var(--primary-500)] backdrop-blur-md">
         <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
