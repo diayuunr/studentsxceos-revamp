@@ -127,7 +127,7 @@ export default function Navbar() {
 
         {/* MOBILE */}
         {open && (
-          <div className="mt-3 flex flex-col gap-2 mb-3 text-md tracking-wide justify-items-center items-center md:hidden">
+          <div className="mt-3 flex flex-col gap-5 mb-5 text-xl tracking-wider justify-items-center items-center md:hidden">
             <Link href="/#about" onClick={() => setOpen(false)}>
               About
             </Link>
