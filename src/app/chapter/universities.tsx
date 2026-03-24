@@ -88,30 +88,37 @@ export default function Universities() {
         <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
         <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
-        {uniRows.map((row, rowIndex) => (
-          <div
-            key={`row-${rowIndex}`}
-            className={`flex w-max flex-nowrap will-change-transform gap-4 px-4 hover:[animation-play-state:paused] ${
-              rowIndex % 2 === 0 ? 'animate-marquee-logos' : 'animate-marquee-logos-reverse'
-            }`}
-          >
-            {[...row, ...row].map((uni, uniIndex) => (
-              <div
-                key={`uni-${rowIndex}-${uniIndex}`}
-                className="flex shrink-0 items-center gap-2.5 bg-white border border-gray-200 shadow-sm px-5 py-3 rounded-full hover:border-[#0A3C8E] transition-all cursor-default"
-              >
-                <img
-                  src={uni.logo}
-                  alt={`${uni.name} logo`}
-                  className="w-6 h-6 object-contain"
-                />
-                <span className="text-sm font-bold text-slate-800">
-                  {uni.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        ))}
+       {uniRows.map((row, rowIndex) => {
+          const totalKarakter = row.reduce((sum, uni) => sum + uni.name.length, 0);
+
+          const dynamicDuration = totalKarakter * 0.25;
+
+          return (
+            <div
+              key={`row-${rowIndex}`}
+              style={{ animationDuration: `${dynamicDuration}s` }}
+              className={`flex w-max flex-nowrap will-change-transform gap-4 px-4 hover:[animation-play-state:paused] ${
+                rowIndex % 2 === 0 ? 'animate-marquee-logos' : 'animate-marquee-logos-reverse'
+              }`}
+            >
+              {[...row, ...row].map((uni, uniIndex) => (
+                <div
+                  key={`uni-${rowIndex}-${uniIndex}`}
+                  className="flex shrink-0 items-center justify-center gap-2.5 bg-white border border-gray-200 shadow-sm px-5 py-3 rounded-full hover:border-[#0A3C8E] transition-all cursor-default"
+                >
+                  <img
+                    src={uni.logo}
+                    alt={`${uni.name} logo`}
+                    className="w-6 h-6 object-contain"
+                  />
+                  <span className="text-sm font-bold text-slate-800">
+                    {uni.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          );
+        })}
 
       </div>
     </section>

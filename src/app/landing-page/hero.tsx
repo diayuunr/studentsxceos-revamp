@@ -33,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut' as const }}
-          className="text-[33px] md:text-[56px] text-white font-medium drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] tracking-wide leading-tight"
+          className="text-[36px] md:text-[56px] text-white font-medium drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] tracking-wide leading-tight"
         >
           Nurture and Connect{' '}
           <span className="hidden md:inline">Future </span>
@@ -43,7 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut' as const }}
-          className="text-4xl md:text-[56px] font-medium mt-2 inline-block bg-clip-text bg-linear-to-r from-[#70BBDD] to-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] text-transparent tracking-wide"
+          className="text-[36px] md:text-[56px] font-medium mt-2 inline-block bg-clip-text bg-linear-to-r from-[#70BBDD] to-white drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] text-transparent tracking-wide"
         >
           <span className="inline md:hidden">Future </span> Business Leaders
         </motion.h2>
