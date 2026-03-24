@@ -4,6 +4,7 @@ import Highlights from './highlights';
 import Programs from './programs';
 import Universities from './universities';
 import Contact from './contact';
+import Footer from './footer';
 
 export default function ChapterDetail() {
   return (
@@ -14,6 +15,7 @@ export default function ChapterDetail() {
       <Programs />
       <Universities />
       <Contact />
+      <Footer />
     </main>
   );
 }
