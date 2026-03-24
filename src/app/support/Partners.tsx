@@ -65,8 +65,7 @@ export default function Partners() {
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
           className="text-sm md:text-lg tracking-wider"
         >
-          Each chapter develops its own initiatives and programs,
-          under the shared values of SXC.
+          Collaborating with industry leaders to drive innovation and create meaningful impact.
         </motion.p>
       </motion.div>
 

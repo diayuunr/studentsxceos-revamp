@@ -8,17 +8,20 @@ const values = [
     {
         title: "Corporate Partnership",
         description: "Collaborate with us to gain brand visibility, access top emerging talent, and align with your CSR goals through sponsorship and executive involvement in our talent pipeline programs.",
-        icon: <Heart/>
+        icon: <Heart/>,
+        button: "Learn More"
     },
     {
         title: "Financial Support",
         description: "Make a direct impact by funding our leadership programs, providing student scholarships, sponsoring events, and supporting the establishment of new chapters across the nation.",
-        icon: <Heart/>
+        icon: <Heart/>,
+        button:"Donate Now"
     },
     {
         title: "Mentorship & Expertise",
         description: "Share your industry expertise and shape future leaders by serving as a mentor, facilitating workshops, joining our advisory board, or speaking at our national events.",
-        icon: <Heart/>
+        icon: <Heart/>,
+        button: "Get Involved"
     },
 ]
 
@@ -102,7 +105,7 @@ const handleScroll = (id: string) => {
                     transition={{ type: "spring", stiffness: 300, damping: 18 }}
                     className="mt-4 py-1.5 w-full rounded-md bg-[var(--color-black)] text-white text-sm font-medium cursor-pointer hover:bg-[var(--neutral-800)] transition-colors tracking-wider"
                 >
-                    Join our community
+                    {value.button}
                 </motion.button>
                 </div>
             </motion.div>
