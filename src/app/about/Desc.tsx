@@ -63,8 +63,8 @@ export default function Desc() {
             <Image
               src="/heroabout-bg.jpg"
               alt="Hero"
-              width={400}
-              height={400}
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
               className="w-full h-full object-cover rounded-lg"
             />
             </motion.div>
