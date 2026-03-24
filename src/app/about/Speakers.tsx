@@ -50,7 +50,7 @@ export default function Speakers() {
       </motion.p>
 
       <div className="flex justify-center">
-        <motion.div className="flex flex-wrap justify-center gap-5 max-w-6xl mx-auto">
+        <motion.div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-6xl mx-auto w-full justify-items-center">
 
           <AnimatePresence>
             {visibleSpeakers.map((speaker, i) => (
@@ -62,26 +62,27 @@ export default function Speakers() {
                 transition={{ duration: 0.4 }}
                 layout
                 whileHover={{ scale: 1.05 }}
-                className="border border-[var(--color-neutral-200)] rounded-xl px-10 md:px-7 p-6 text-center shadow-sm"
+                className="border border-[var(--color-neutral-200)] rounded-xl p-4 text-center shadow-sm w-full max-w-[250px] md:max-w-none flex flex-col"
               >
-                <div className="relative w-full h-45 overflow-hidden rounded-lg">
+
+                <div className="relative w-full h-48 overflow-hidden rounded-lg">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-3/4 h-3/4 bg-blue-400/20 blur-2xl rounded-full"></div>
+                    <div className="w-3/4 h-3/4 bg-blue-400/20 blur-2xl rounded-full translate-y-2"></div>
                   </div>
 
                   <Image
                     src={speaker.image}
                     alt={speaker.title}
-                    className="object-contain scale-170 z-10 translate-y-12"
+                    className={`z-10 ${speaker.imageClass || "object-cover"}`}
                     fill
                   />
                 </div>
 
-                <div className="border border-[var(--color-neutral-200)] rounded-xl px-8 md:px-5 py-2 text-center shadow-xs">
-                  <h2 className="text-md md:text-lg font-medium">
+                <div className="border border-[var(--color-neutral-200)] rounded-xl px-5 py-2 text-center shadow-xs mt-auto flex flex-col flex-1 justify-center">
+                  <h2 className="text-sm md:text-base font-medium tracking-wide">
                     {speaker.title}
                   </h2>
-                  <p className="text-sm md:text-base font-normal max-w-md">
+                  <p className="text-xs md:text-sm font-normal tracking-wider md:tracking-wide">
                     {speaker.description}
                   </p>
                 </div>

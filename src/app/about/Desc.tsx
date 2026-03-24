@@ -64,8 +64,10 @@ export default function Desc() {
               src="/heroabout-bg.jpg"
               alt="Hero"
               fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              priority
+              sizes="(min-width: 768px) 50vw, 100vw"
               quality={100}
+              unoptimized
               className="object-cover rounded-lg"
             />
             </motion.div>
