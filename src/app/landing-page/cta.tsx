@@ -26,7 +26,7 @@ export default function CTA() {
         >
           <h2 className="text-3xl md:text-4xl font-medium text-white mb-8 mt-5 md:mt-0 text-center tracking-wide">
             <span className="text-[#BBE8E9]">Ready to</span> Grow With
-            StudentXCEOs?
+            StudentsxCEOs?
           </h2>
 
           <p className="text-white text-sm md:text-[18px] mb-8 text-center font-normal tracking-wide max-w-2xl">

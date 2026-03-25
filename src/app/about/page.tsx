@@ -6,7 +6,7 @@ import Method from "./Method";
 import Values from "./Values";
 import Speaker from "./Speakers";
 import GrowthSection from "./Growth";
-import Footer from "./footer";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (

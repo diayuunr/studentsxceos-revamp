@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer id="footer" className="w-full bg-white px-4 md:px-8 pb-8 mt-10">
+    <footer id="footer" className="w-full bg-white px-4 md:px-8 pb-8">
       <div className="max-w-full mx-auto bg-linear-to-b from-[#E6F2F9] to-[#FDFDFD] rounded-[30px] pt-16 pb-8 px-8 md:px-16 flex flex-col">
         <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
           <div className="flex flex-col max-w-sm md:items-start text-left">
@@ -33,7 +33,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-4 font-light tracking-wider">
                 <li>
                   <a
-                    href="#about"
+                    href="/landing-page#about"
                     className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                   >
                     About Us
@@ -41,7 +41,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#what-you-gain"
+                    href="/landing-page#community"
                     className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                   >
                     Community
@@ -49,7 +49,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="#faq"
+                    href="/landing-page#partners"
                     className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                   >
                     Support
@@ -63,7 +63,7 @@ export default function Footer() {
               <ul className="flex flex-col gap-4 font-light tracking-wider">
                 <li>
                   <a
-                    href="#faq"
+                    href="/landing-page#faq"
                     className="text-slate-600 hover:text-[#0A3C8E] transition-colors text-sm md:text-base"
                   >
                     FAQs
@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-slate-200/60 flex justify-center items-center">
           <p className="text-slate-700 text-sm font-normal tracking-wide">
-            © 2025 Copyright - OmahTI
+            © 2026 StudentsxCEOs. All rights reserved.
           </p>
         </div>
       </div>

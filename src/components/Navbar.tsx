@@ -33,7 +33,7 @@ export default function Navbar() {
       }
     };
 
-    setActiveFromURL(); // ⬅️ penting (initial load)
+    setActiveFromURL();
 
     window.addEventListener("hashchange", setActiveFromURL);
     return () => window.removeEventListener("hashchange", setActiveFromURL);

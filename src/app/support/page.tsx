@@ -4,7 +4,7 @@ import Partners from "./Partners";
 import Why from "./Why";
 import Ways from "./Ways";
 import Medpart from "./Medpart";
-import Footer from "./footer";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (

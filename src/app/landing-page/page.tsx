@@ -3,7 +3,7 @@ import About from './about';
 import Community from './community';
 import CTA from './cta';
 import FAQ from './faq';
-import Footer from './footer';
+import Footer from '@/components/Footer';
 import Partners from './partners';
 import WhatYouGain from './what-you-gain';
 import Navbar from './navbar';
