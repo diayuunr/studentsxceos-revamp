@@ -43,10 +43,10 @@ export default function About() {
             <div className="flex w-full animate-marquee-stats">
               <div className="flex gap-4 md:gap-16 min-w-full shrink-0 justify-around px- md:px-8" >
                 {[
-                  { label: 'Years', value: '20+' },
-                  { label: 'Programs', value: '100' },
+                  { label: 'Years', value: '15+' },
+                  { label: 'Programs', value: '20+' },
                   { label: 'Partners', value: '100' },
-                  { label: 'University', value: '25+' },
+                  { label: 'University', value: '30+' },
                 ].map((stat, i) => (
                   <div key={i} className="flex flex-col items-center">
                     <span className="text-2xl md:text-4xl font-bold bg-linear-to-b from-[#121926] to-[#0A3C8E] bg-clip-text text-transparent">
