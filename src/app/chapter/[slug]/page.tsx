@@ -70,7 +70,7 @@ const chapterData = {
       {
         title: 'Pro Connect',
         description: 'Regional networking hub',
-        image: '/programs/program-ejpc.jpg',
+        image: '/programs/program-ejpc.JPG',
       },
       {
         title: 'SxC Academy',
@@ -80,7 +80,7 @@ const chapterData = {
       {
         title: 'IGDF',
         description: 'National strategic discussions',
-        image: '/programs/program-igdf.JPG',
+        image: '/programs/program-igdf.jpg',
       },
       {
         title: 'Global Summit',
@@ -132,7 +132,7 @@ const chapterData = {
       { 
         title: "SxC Grand Summit", 
         description: "Annual leadership conference", 
-        image: '/programs/program-igdf.JPG',
+        image: '/programs/program-igdf.jpg',
       }
     ],
     contactEmail: "bandung@studentsxceos.org",
@@ -168,7 +168,7 @@ const chapterData = {
       { 
         title: "SxConference", 
         description: "High-level industry panels", 
-        image: '/programs/program2.JPG',
+        image: '/programs/program2.jpg',
       },
       { 
         title: "SxCollab", 
@@ -183,7 +183,7 @@ const chapterData = {
       { 
         title: "SxCelerate", 
         description: "Fast-track leadership growth", 
-        image: '/programs/program4.JPG', 
+        image: '/programs/program4.jpg', 
       },
       { 
         title: "Meet the Series", 
