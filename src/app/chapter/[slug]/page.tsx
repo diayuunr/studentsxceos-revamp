@@ -127,7 +127,7 @@ const chapterData = {
       { 
         title: "SxConnect", 
         description: "Extensive networking sessions", 
-        image: '/programs/program-ejpc.jpg',
+        image: '/programs/program-ejpc.JPG',
       },
       { 
         title: "SxC Grand Summit", 
