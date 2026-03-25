@@ -7,15 +7,16 @@ import Image from 'next/image';
 interface HeroProps {
   title: string;
   subtitle: string;
+  bgImage: string; 
 }
 
-export default function Hero({ title, subtitle }: HeroProps) {
+export default function Hero({ title, subtitle, bgImage }: HeroProps) {
   const router = useRouter();
 
   return (
     <section className="relative w-full h-[40vh] md:h-[50vh] flex flex-col items-center justify-center overflow-hidden">
       <Image
-        src="/candi.png"
+        src={bgImage}
         alt={`${title} Background`}
         fill
         className="absolute inset-0 w-full h-full object-cover z-0"

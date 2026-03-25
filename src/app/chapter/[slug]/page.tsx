@@ -11,6 +11,7 @@ const chapterData = {
   yogyakarta: {
     heroTitle: 'Yogyakarta',
     heroSubtitle: 'Nurturing Future Leaders Across Yogyakarta',
+    heroBg: "/candi.png",
     aboutDescription: (
       <>
         SxC Yogyakarta connects ambitious students with industry leaders through
@@ -46,6 +47,7 @@ const chapterData = {
   'east-java': {
     heroTitle: 'East Java',
     heroSubtitle: 'Nurturing Future Leaders Across East Java',
+    heroBg: "/places/east-java.png",
     aboutDescription: (
       <>
         SxC East Java connects ambitious students with industry leaders through
@@ -91,6 +93,7 @@ const chapterData = {
   bandung: {
     heroTitle: 'Bandung',
     heroSubtitle: 'Nurturing Future Leaders Across Bandung',
+    heroBg: "/places/bandung.png",
     aboutDescription: (
       <>
        SxC Bandung connects ambitious students with industry leaders through
@@ -137,6 +140,7 @@ const chapterData = {
   jakarta: {
     heroTitle: 'Jakarta',
     heroSubtitle: 'Nurturing Future Leaders Across Jakarta',
+    heroBg: "/places/jakarta.png",
     aboutDescription: (
       <>
         SxC Jakarta connects ambitious students with industry leaders through
@@ -159,17 +163,17 @@ const chapterData = {
       { 
         title: "SxCareer", 
         description: "Professional career preparation", 
-        image: '/programs/program-ejpc.jpg',
+        image: '/programs/program1.jpg',
       },
       { 
         title: "SxConference", 
         description: "High-level industry panels", 
-        image: '/programs/program-igdf.JPG',
+        image: '/programs/program2.JPG',
       },
       { 
         title: "SxCollab", 
         description: "Strategic partnership projects", 
-        image: '/programs/program-summit.jpg',
+        image: '/programs/program3.jpg',
       },
       { 
         title: "SxNetwork", 
@@ -179,7 +183,7 @@ const chapterData = {
       { 
         title: "SxCelerate", 
         description: "Fast-track leadership growth", 
-        image: '/programs/program-academy.JPG', 
+        image: '/programs/program4.JPG', 
       },
       { 
         title: "Meet the Series", 
@@ -189,7 +193,7 @@ const chapterData = {
       { 
         title: "SxC International Summit", 
         description: "Global leadership convergence", 
-        image: '/programs/program-summit.jpg',
+        image: '/programs/program5.png',
       }
     ],
     contactEmail: "jakarta@studentsxceos.org",
@@ -197,6 +201,7 @@ const chapterData = {
    semarang: {
     heroTitle: 'Semarang',
     heroSubtitle: 'Nurturing Future Leaders Across Semarang',
+    heroBg: "/places/kota-semarang.png",
     aboutDescription: (
       <>
         SxC Semarang connects ambitious students with industry leaders through
@@ -241,7 +246,7 @@ export default async function ChapterPage({
 
   return (
     <main className="w-full flex flex-col items-center overflow-x-hidden">
-      <Hero title={data.heroTitle} subtitle={data.heroSubtitle} />
+      <Hero title={data.heroTitle} subtitle={data.heroSubtitle} bgImage={data.heroBg}/>
       <About description={data.aboutDescription} />
       <Highlights />
       <Programs data={data.programs} />
