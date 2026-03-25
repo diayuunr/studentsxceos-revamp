@@ -20,6 +20,12 @@ const chapterData = {
         business leaders.
       </>
     ),
+    highlights: [
+      { label: "Established", value: "2011" },
+      { label: "Members", value: "TBA" },
+      { label: "Programs", value: "TBA" },
+      { label: "Universities", value: "TBA" },
+    ],
     programs: [
       {
         title: 'Coming soon',
@@ -44,6 +50,9 @@ const chapterData = {
     ],
     contactEmail: "yogyakarta@studentsxceos.org",
   },
+
+
+
   'east-java': {
     heroTitle: 'East Java',
     heroSubtitle: 'Nurturing Future Leaders Across East Java',
@@ -61,6 +70,12 @@ const chapterData = {
         networking among future business leaders.
       </>
     ),
+    highlights: [
+      { label: "Established", value: "2017" },
+      { label: "Members", value: "70+" },
+      { label: "Programs", value: "5" },
+      { label: "Universities", value: "9" },
+    ],
     programs: [
       {
         title: 'Meet The Expert',
@@ -90,6 +105,9 @@ const chapterData = {
     ],
     contactEmail: "eastjava@studentsxceos.org",
   },
+
+
+
   bandung: {
     heroTitle: 'Bandung',
     heroSubtitle: 'Nurturing Future Leaders Across Bandung',
@@ -103,6 +121,12 @@ const chapterData = {
         networking among future business leaders.
       </>
     ),
+    highlights: [
+      { label: "Established", value: "2015" },
+      { label: "Members", value: "40+" },
+      { label: "Programs", value: "6" },
+      { label: "Universities", value: "10" },
+    ],
     programs: [
       { 
         title: "Project Management", 
@@ -137,6 +161,9 @@ const chapterData = {
     ],
     contactEmail: "bandung@studentsxceos.org",
   },
+
+
+
   jakarta: {
     heroTitle: 'Jakarta',
     heroSubtitle: 'Nurturing Future Leaders Across Jakarta',
@@ -154,6 +181,12 @@ const chapterData = {
         networking among future business leaders.
       </>
     ),
+    highlights: [
+      { label: "Established", value: "2010" },
+      { label: "Members", value: "70+" },
+      { label: "Programs", value: "8" },
+      { label: "Universities", value: "25" },
+    ],
     programs: [
       { 
         title: "School of Ideas", 
@@ -210,6 +243,12 @@ const chapterData = {
         business leaders.
       </>
     ),
+    highlights: [
+      { label: "Established", value: "2015" },
+      { label: "Members", value: "50+" },
+      { label: "Programs", value: "TBA" },
+      { label: "Universities", value: "TBA" },
+    ],
     programs: [
       {
         title: 'Coming soon',
@@ -248,7 +287,7 @@ export default async function ChapterPage({
     <main className="w-full flex flex-col items-center overflow-x-hidden">
       <Hero title={data.heroTitle} subtitle={data.heroSubtitle} bgImage={data.heroBg}/>
       <About description={data.aboutDescription} />
-      <Highlights />
+      <Highlights stats={data.highlights} />
       <Programs data={data.programs} />
       <Universities />
       <Contact email={data.contactEmail} />

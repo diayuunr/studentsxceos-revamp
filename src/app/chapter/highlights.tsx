@@ -1,13 +1,16 @@
 'use client';
 import { motion } from 'framer-motion';
 
-export default function Highlights() {
-  const stats = [
-    { label: "Established", value: "2010" },
-    { label: "Members", value: "70+" },
-    { label: "Programs", value: "10+" },
-    { label: "Universities", value: "40+" },
-  ];
+export interface StatItem {
+  label: string;
+  value: string;
+}
+
+interface HighlightsProps {
+  stats: StatItem[];
+}
+
+export default function Highlights({ stats }: HighlightsProps) {
 
   return (
     <section className="w-full px-6 pb-16 md:pb-24 flex flex-col items-center">
@@ -23,6 +26,7 @@ export default function Highlights() {
         </motion.h3>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full">
+
           {stats.map((stat, index) => (
             <motion.div 
               key={index} 
