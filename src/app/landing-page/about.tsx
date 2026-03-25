@@ -45,7 +45,7 @@ export default function About() {
                 {[
                   { label: 'Years', value: '15+' },
                   { label: 'Programs', value: '20+' },
-                  { label: 'Partners', value: '100' },
+                  { label: 'Partners', value: '100+' },
                   { label: 'University', value: '30+' },
                 ].map((stat, i) => (
                   <div key={i} className="flex flex-col items-center">
