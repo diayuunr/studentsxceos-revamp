@@ -1,7 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 
-export default function Contact() {
+interface ContactProps {
+  email: string;
+}
+
+export default function Contact({ email }: ContactProps) {
   const socialMedia = [
     { 
       name: 'Instagram', 
@@ -21,7 +25,7 @@ export default function Contact() {
   ];
 
   return (
-    <section className="w-full bg-[#E6F2F9] px-8 py-16 md:py-24 overflow-hidden sm:px-16">
+    <section className="w-full bg-[#E6F2F9] px-8 py-16 md:py-24 overflow-hidden sm:px-16 mt-10 mb-25">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
         
         <motion.div 
@@ -73,7 +77,7 @@ export default function Contact() {
             We&apos;re always looking to connect with those who share an interest in our community.
           </p>
           
-          <a href="mailto:mail@studentsxceos.org">
+          <a href={`mailto:${email}`}>
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}

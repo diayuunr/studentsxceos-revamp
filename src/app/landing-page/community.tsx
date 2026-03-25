@@ -11,6 +11,15 @@ export default function Community() {
     transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
+  // 1. TAMBAHIN PROPERTI 'slug' DI SINI BIAR COCOK SAMA DATABASE KITA
+  const citiesData = [
+    { name: "Jakarta", file: "Jakarta.png", slug: "jakarta" },
+    { name: "Yogyakarta", file: "Yogyakarta.png", slug: "yogyakarta" },
+    { name: "Bandung", file: "Bandung.png", slug: "bandung" },
+    { name: "East Java", file: "East Java.png", slug: "east-java" },
+    { name: "Semarang", file: "Semarang.png", slug: "semarang" },
+  ];
+
   return (
     <section
       id="community"
@@ -28,15 +37,9 @@ export default function Community() {
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
-          {[
-            { name: "Jakarta", file: "Jakarta.png" },
-            { name: "Yogyakarta", file: "Yogyakarta.png" },
-            { name: "Bandung", file: "Bandung.png" },
-            { name: "East Java", file: "East Java.png" },
-            { name: "Semarang", file: "Semarang.png" },
-          ].map((city, index) => (
+          {citiesData.map((city, index) => (
             <Link
-              href="/chapter"
+              href={`/chapter/${city.slug}`}
               key={city.name}
               className={`block ${index === 4 ? "col-span-2 md:col-span-1" : ""}`}
             >

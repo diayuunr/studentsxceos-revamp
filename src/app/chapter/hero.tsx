@@ -1,16 +1,22 @@
 'use client';
+
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
-export default function Hero() {
+interface HeroProps {
+  title: string;
+  subtitle: string;
+}
+
+export default function Hero({ title, subtitle }: HeroProps) {
   const router = useRouter();
 
   return (
     <section className="relative w-full h-[40vh] md:h-[50vh] flex flex-col items-center justify-center overflow-hidden">
       <Image
         src="/candi.png"
-        alt="East Java Background"
+        alt={`${title} Background`}
         fill
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
@@ -38,10 +44,10 @@ export default function Hero() {
         className="relative z-20 text-center px-4 mt-8"
       >
         <h1 className="text-2xl md:text-3xl font-medium text-white mb-2 tracking-wide glow-text">
-          East Java
+          {title}
         </h1>
         <p className="text-white/90 text-[16px] md:text-[18px] font-light tracking-wider max-w-sm md:max-w-xl mx-auto">
-          Nurturing Future Leaders Across East Java
+          {subtitle}
         </p>
       </motion.div>
     </section>

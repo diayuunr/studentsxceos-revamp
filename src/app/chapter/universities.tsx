@@ -1,8 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
 
-// Fungsi sakti buat motong array otomatis
-// Kalau array isi 40 dan size 10, otomatis jadi 4 baris!
 function chunkArray<T>(array: T[], size: number): T[][] {
   return Array.from(
     { length: Math.ceil(array.length / size) },

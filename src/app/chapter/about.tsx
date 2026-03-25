@@ -1,7 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 
-export default function About() {
+interface AboutProps {
+  description: React.ReactNode;
+}
+
+export default function About({ description }: AboutProps) {
   return (
     <section className="w-full px-6 py-16 md:py-24 flex flex-col items-center">
       <div className="max-w-4xl text-center mb-16 md:mb-24">
@@ -23,16 +27,10 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           className="leading-relaxed tracking-wide text-sm md:text-[18px]"
         >
-          SxC East Java connects ambitious students with industry leaders
-          through curated discussions, executive sessions, and strategic
-          initiatives. Operating across key academic hubs in{' '}
-          <strong className="font-medium">
-            Surabaya, Malang, Kediri, Madiun, and Jember
-          </strong>
-          . By uniting diverse academic backgrounds, SxC East Java creates
-          meaningful opportunities for collaboration, leadership development,
-          and networking among future business leaders.
+
+          {description}
         </motion.p>
+
       </div>
     </section>
   );

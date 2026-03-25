@@ -1,0 +1,253 @@
+import React from 'react';
+import Hero from '../hero';
+import About from '../about';
+import Programs from '../programs';
+import Highlights from '../highlights';
+import Universities from '../universities';
+import Contact from '../contact';
+import Footer from '@/components/Footer';
+
+const chapterData = {
+  yogyakarta: {
+    heroTitle: 'Yogyakarta',
+    heroSubtitle: 'Nurturing Future Leaders Across Yogyakarta',
+    aboutDescription: (
+      <>
+        SxC Yogyakarta connects ambitious students with industry leaders through
+        curated discussions and strategic initiatives. By uniting diverse
+        academic backgrounds, we create meaningful opportunities for future
+        business leaders.
+      </>
+    ),
+    programs: [
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+    ],
+    contactEmail: "yogyakarta@studentsxceos.org",
+  },
+  'east-java': {
+    heroTitle: 'East Java',
+    heroSubtitle: 'Nurturing Future Leaders Across East Java',
+    aboutDescription: (
+      <>
+        SxC East Java connects ambitious students with industry leaders through
+        curated discussions, executive sessions, and strategic initiatives.
+        Operating across key academic hubs in{' '}
+        <strong className="font-medium">
+          Surabaya, Malang, Kediri, Madiun, and Jember
+        </strong>
+        . By uniting diverse academic backgrounds, SxC East Java creates
+        meaningful opportunities for collaboration, leadership development, and
+        networking among future business leaders.
+      </>
+    ),
+    programs: [
+      {
+        title: 'Meet The Expert',
+        description: 'Exclusive expert insights',
+        image: '/programs/program-mte.jpg',
+      },
+      {
+        title: 'Pro Connect',
+        description: 'Regional networking hub',
+        image: '/programs/program-ejpc.jpg',
+      },
+      {
+        title: 'SxC Academy',
+        description: 'Intensive leadership training',
+        image: '/programs/program-academy.JPG',
+      },
+      {
+        title: 'IGDF',
+        description: 'National strategic discussions',
+        image: '/programs/program-igdf.JPG',
+      },
+      {
+        title: 'Global Summit',
+        description: 'Global networking event',
+        image: '/programs/program-summit.jpg',
+      },
+    ],
+    contactEmail: "eastjava@studentsxceos.org",
+  },
+  bandung: {
+    heroTitle: 'Bandung',
+    heroSubtitle: 'Nurturing Future Leaders Across Bandung',
+    aboutDescription: (
+      <>
+       SxC Bandung connects ambitious students with industry leaders through
+        curated discussions, executive sessions, and strategic initiatives.
+        By uniting diverse academic backgrounds, SxC Bandung creates
+        meaningful opportunities for collaboration, leadership development, and
+        networking among future business leaders.
+      </>
+    ),
+    programs: [
+      { 
+        title: "Project Management", 
+        description: "Mastering execution skills", 
+        image: '/programs/program-academy.JPG',
+      },
+      { 
+        title: "Behind the Scenes", 
+        description: "Exclusive company insights", 
+        image: "/programs/behind-the-scene.jpeg" 
+      },
+      { 
+        title: "Meet the CEOs", 
+        description: "Direct executive mentoring", 
+        image: '/programs/program-mte.jpg',
+      },
+      { 
+        title: "SxCare", 
+        description: "Social impact initiatives", 
+        image: '/programs/program-summit.jpg',
+      },
+      { 
+        title: "SxConnect", 
+        description: "Extensive networking sessions", 
+        image: '/programs/program-ejpc.jpg',
+      },
+      { 
+        title: "SxC Grand Summit", 
+        description: "Annual leadership conference", 
+        image: '/programs/program-igdf.JPG',
+      }
+    ],
+    contactEmail: "bandung@studentsxceos.org",
+  },
+  jakarta: {
+    heroTitle: 'Jakarta',
+    heroSubtitle: 'Nurturing Future Leaders Across Jakarta',
+    aboutDescription: (
+      <>
+        SxC Jakarta connects ambitious students with industry leaders through
+        curated discussions, executive sessions, and strategic initiatives.
+        Operating across key academic hubs in{' '}
+        <strong className="font-medium">
+          Jakarta, Bogor, Depok, Tanggerang, and Bekasi
+        </strong>
+        . By uniting diverse academic backgrounds, SxC Jakarta creates
+        meaningful opportunities for collaboration, leadership development, and
+        networking among future business leaders.
+      </>
+    ),
+    programs: [
+      { 
+        title: "School of Ideas", 
+        description: "Innovative concept development", 
+        image:'/programs/program-summit.jpg',
+      },
+      { 
+        title: "SxCareer", 
+        description: "Professional career preparation", 
+        image: '/programs/program-ejpc.jpg',
+      },
+      { 
+        title: "SxConference", 
+        description: "High-level industry panels", 
+        image: '/programs/program-igdf.JPG',
+      },
+      { 
+        title: "SxCollab", 
+        description: "Strategic partnership projects", 
+        image: '/programs/program-summit.jpg',
+      },
+      { 
+        title: "SxNetwork", 
+        description: "Exclusive executive networking", 
+        image: "/programs/behind-the-scene.jpeg" 
+      },
+      { 
+        title: "SxCelerate", 
+        description: "Fast-track leadership growth", 
+        image: '/programs/program-academy.JPG', 
+      },
+      { 
+        title: "Meet the Series", 
+        description: "Direct industry insights", 
+        image: '/programs/program-mte.jpg',
+      },
+      { 
+        title: "SxC International Summit", 
+        description: "Global leadership convergence", 
+        image: '/programs/program-summit.jpg',
+      }
+    ],
+    contactEmail: "jakarta@studentsxceos.org",
+  },
+   semarang: {
+    heroTitle: 'Semarang',
+    heroSubtitle: 'Nurturing Future Leaders Across Semarang',
+    aboutDescription: (
+      <>
+        SxC Semarang connects ambitious students with industry leaders through
+        curated discussions and strategic initiatives. By uniting diverse
+        academic backgrounds, we create meaningful opportunities for future
+        business leaders.
+      </>
+    ),
+    programs: [
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+      {
+        title: 'Coming soon',
+        description: 'To be announced',
+        image: '/candi.png',
+      },
+    ],
+    contactEmail: "semarang@studentsxceos.org",
+  },
+};
+
+export default async function ChapterPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const data = chapterData[slug as keyof typeof chapterData];
+
+  return (
+    <main className="w-full flex flex-col items-center overflow-x-hidden">
+      <Hero title={data.heroTitle} subtitle={data.heroSubtitle} />
+      <About description={data.aboutDescription} />
+      <Highlights />
+      <Programs data={data.programs} />
+      <Universities />
+      <Contact email={data.contactEmail} />
+      <Footer />
+    </main>
+  );
+}
