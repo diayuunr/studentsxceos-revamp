@@ -11,7 +11,6 @@ export default function Community() {
     transition: { duration: 0.6, ease: "easeOut" as const },
   };
 
-  // 1. TAMBAHIN PROPERTI 'slug' DI SINI BIAR COCOK SAMA DATABASE KITA
   const citiesData = [
     { name: "Jakarta", file: "Jakarta.png", slug: "jakarta" },
     { name: "Yogyakarta", file: "Yogyakarta.png", slug: "yogyakarta" },
@@ -36,12 +35,12 @@ export default function Community() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6 md:max-w-2xl lg:max-w-7xl mx-auto">
           {citiesData.map((city, index) => (
             <Link
               href={`/chapter/${city.slug}`}
               key={city.name}
-              className={`block ${index === 4 ? "col-span-2 md:col-span-1" : ""}`}
+              className={`block ${index === 4 ? "col-span-2 lg:col-span-1" : ""}`}
             >
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -49,7 +48,7 @@ export default function Community() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
                 className={`relative bg-linear-to-b from-[#121926] to-[#0A3C8E] rounded-[20px] p-6 flex flex-col items-center justify-end overflow-hidden group hover:-translate-y-2 transition-all duration-300 shadow-xl cursor-pointer
-          ${index === 4 ? "aspect-[2/1.1] md:aspect-square" : "aspect-square"}
+          ${index === 4 ? "aspect-[2/1.1] lg:aspect-square" : "aspect-square"}
         `}
               > 
                 <Image

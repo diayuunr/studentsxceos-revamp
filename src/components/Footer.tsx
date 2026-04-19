@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer id="footer" className="w-full bg-white px-4 md:px-8 pb-8">
       <div className="max-w-full mx-auto bg-linear-to-b from-[#E6F2F9] to-[#FDFDFD] rounded-[30px] pt-16 pb-8 px-8 md:px-16 flex flex-col">
-        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0 items-center">
           <div className="flex flex-col max-w-sm md:items-start text-left">
             <Image
               src="/logo-sxc.png"
