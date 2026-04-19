@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full z-50 transition-shadow">
-      <div className="top-0 left-0 right-0 w-full mx-auto max-w-[98rem] rounded-b-xl bg-[var(--color-white)] px-8 md:px-16 py-3 shadow-sm">
+      <div className="top-0 left-0 right-0 w-full mx-auto rounded-b-xl bg-[var(--color-white)] px-8 md:px-16 py-3 shadow-sm">
         
         <div className="relative flex items-center justify-between">
 
@@ -68,7 +68,7 @@ export default function Navbar() {
             </button>
 
             <button
-              onClick={() => handleNavigate("/about")}
+              onClick={() => handleNavigate("/support")}
               className="hover:scale-110 transition-all duration-200 text-white text-sm tracking-wide relative cursor-pointer bg-gradient-to-br from-[#121926] to-[#0A3C8E] overflow-hidden py-2 px-3 rounded-lg z-0 border border-black"   
             > 
               Partner with us 
