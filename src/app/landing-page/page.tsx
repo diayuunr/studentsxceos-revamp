@@ -6,7 +6,7 @@ import FAQ from './faq';
 import Footer from '@/components/Footer';
 import Partners from './partners';
 import WhatYouGain from './what-you-gain';
-import Navbar from './navbar';
+import Navbar from '@/components/Navbar';
 
 export default function Page() {
   return (
