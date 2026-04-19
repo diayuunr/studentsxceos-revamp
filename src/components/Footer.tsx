@@ -18,10 +18,11 @@ export default function Footer() {
         Back to top
       </button>
 
-      <div className="max-w-full mx-auto pt-16 pb-8 px-8 md:px-25 flex flex-col">
-        <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-0 items-center">
-          <div className="flex flex-col max-w-md md:items-start text-left">
-            <div className="flex gap-5 mb-6">
+      <div className="max-w-full mx-auto pt-16 pb-8 px-11 md:px-25 flex flex-col">        
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-0">
+        
+          <div className="flex flex-col max-w-md md:items-start">
+            <div className="flex gap-5 mb-6 mt-10 md:mt-0 items-center">
               <Image
                 src="/sxc-logo.png"
                 alt="StudentsxCEOs Logo"
@@ -34,28 +35,27 @@ export default function Footer() {
               </h5>
             </div>
 
-            <p className="text-sm md:text-base leading-relaxed mb-6 font-light text-center md:text-start tracking-widest">
+            <p className="text-sm md:text-base leading-relaxed md:mb-6 font-light text-left tracking-widest">
               Connecting ambitious students with world-class business leaders to shape the future of Indonesia.
             </p>
 
-            <div className="flex gap-10 justify-center md:justify-start">
+            <div className="hidden md:flex gap-10 justify-start">
               <a href="https://www.instagram.com/studentsxceos/" target="_blank" rel="noopener noreferrer">
                 <Instagram size={20} className="hover:text-gray-300 transition-colors cursor-pointer" />
               </a>
               <a href="https://www.linkedin.com/company/studentsxceos/" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} className="hover:text-gray-300 transition-colors cursor-pointer" />
               </a>
-              <a href="mailto:mail@studentsxceos.org" target="_blank" rel="noopener noreferrer">
+              <a href="mailto:mail@studentsxceos.org">
                 <Mail size={20} className="hover:text-gray-300 transition-colors cursor-pointer" />
               </a>
             </div>
-
           </div>
 
-          <div className="flex justify-center md:justify-end gap-16 md:gap-24">
+          <div className="flex justify-start md:justify-end">
             <div className="flex flex-col items-start">
-              <h4 className="font-medium text-lg mb-5 tracking-wider">Quick Links</h4>
-              <ul className="flex flex-col gap-2 font-light tracking-wider">
+              <h4 className="font-medium text-lg md:mb-5 mb-4 tracking-wider">Quick Links</h4>
+              <ul className="flex flex-col gap-2 font-light tracking-wider items-start">
                 <li>
                   <Link
                     href="/about"
@@ -91,8 +91,23 @@ export default function Footer() {
               </ul>
             </div>
           </div>
+
+          {/* Mobile */}
+          <div className="flex md:hidden gap-10 justify-center mt-4">
+            <a href="https://www.instagram.com/studentsxceos/" target="_blank" rel="noopener noreferrer">
+              <Instagram size={20} className="hover:text-gray-300 transition-colors cursor-pointer" />
+            </a>
+            <a href="https://www.linkedin.com/company/studentsxceos/" target="_blank" rel="noopener noreferrer">
+              <Linkedin size={20} className="hover:text-gray-300 transition-colors cursor-pointer" />
+            </a>
+            <a href="mailto:mail@studentsxceos.org">
+              <Mail size={20} className="hover:text-gray-300 transition-colors cursor-pointer" />
+            </a>
+          </div>
+
         </div>
 
+        {/* Copyright */}
         <div className="mt-8 pt-5 border-t border-slate-600/60 flex justify-center items-center">
           <p className="text-sm font-normal tracking-wider">
             © 2026 Copyright - StudentsxCEOs
