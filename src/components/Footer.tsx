@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Linkedin, Mail } from 'react-feather';
+import { ArrowUp, Instagram, Linkedin, Mail } from 'react-feather';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -13,9 +13,9 @@ export default function Footer() {
     <footer id="footer" className="w-full bg-[var(--primary-600)] rounded-t-2xl text-white relative mt-5">
       <button
         onClick={scrollToTop}
-        className="absolute text-sm tracker-wide font-medium cursor-pointer top-10 left-1/2 -translate-x-1/2 p-1 px-3 rounded-md shadow-lg hover:scale-110 transition-all duration-300 border-2 border-white/10 group"
+        className="absolute flex my-auto gap-2 items-center text-sm tracker-wide font-medium cursor-pointer top-10 left-1/2 -translate-x-1/2 p-1 px-3 rounded-md shadow-lg hover:scale-110 transition-all duration-300 border-2 border-white/10 group"
       >
-        Back to top
+        <ArrowUp /> Back to top
       </button>
 
       <div className="max-w-full mx-auto pt-16 pb-8 px-11 md:px-25 flex flex-col">        
@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm md:text-base leading-relaxed md:mb-6 font-light text-left tracking-widest">
-              Connecting ambitious students with world-class business leaders to shape the future of Indonesia.
+              Home for Indonesia&apos;s future business leaders
             </p>
 
             <div className="hidden md:flex gap-10 justify-start">
@@ -110,7 +110,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-8 pt-5 border-t border-slate-600/60 flex justify-center items-center">
           <p className="text-sm font-normal tracking-wider">
-            © 2026 Copyright - StudentsxCEOs
+            © 2026 StudentsxCEOs
           </p>
         </div>
       </div>

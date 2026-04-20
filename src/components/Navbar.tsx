@@ -90,12 +90,12 @@ export default function Navbar() {
           <div className="fixed inset-0 z-50 md:hidden">
             {/* Backdrop */}
             <div 
-              className="absolute inset-0 bg-black/20" 
+              className="absolute inset-0 bg-black/40" 
               onClick={() => setOpen(false)}
             />
             
             {/* Menu Panel */}
-            <div className="absolute top-0 right-0 left-0 h-full w-full bg-white shadow-2xl flex flex-col p-10">
+            <div className="absolute top-0 right-0 h-full w-full max-w-[85%] bg-white shadow-2xl flex flex-col p-10">
               {/* Close Button & Logo */}
               <div className="flex items-center justify-between mb-8">
                 <Link href="/" onClick={() => setOpen(false)}>
