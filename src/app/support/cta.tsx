@@ -25,14 +25,11 @@ export default function CTA() {
           className="relative z-20 flex flex-col items-center w-full"
         >
           <h2 className="text-3xl md:text-4xl font-medium text-white mb-8 mt-5 md:mt-0 text-center tracking-wide">
-            <span className="text-[#BBE8E9]">Ready to</span> Grow With
-            StudentsxCEOs?
+            Other Ways to Connect
           </h2>
 
           <p className="text-white text-sm md:text-[18px] mb-8 text-center font-normal tracking-wide max-w-2xl">
-            Whether you&apos;re a university student looking to expand your
-            network, or an organization seeking meaningful collaboration —
-            there&apos;s a place for you here.
+            Still have questions or want to learn more about our network?
           </p>
 
           <div className="flex gap-5 mb-8">
@@ -46,13 +43,13 @@ export default function CTA() {
               </motion.button>
             </Link>
 
-            <Link href="/support">
+            <Link href="/faq">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="cursor-pointer flex-1 md:flex-none bg-[var(--primary-700)] text-white font-medium py-2 px-4 md:px-6 rounded-lg hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
               >
-                Partner with us
+                Frequently Asked Questions
               </motion.button>
             </Link>
           </div>

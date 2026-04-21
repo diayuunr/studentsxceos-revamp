@@ -14,7 +14,7 @@ export default function GetToKnow() {
   return (
     <section
       id="about"
-      className="md:ml-0 mb-15 md:mb-0 mx-auto max-w-full px-8 md:px-10 md:py-15 text-black overflow-x-hidden"
+      className="md:ml-0 mt-5 mx-auto max-w-full px-8 md:px-10 py-15 text-black overflow-x-hidden"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
