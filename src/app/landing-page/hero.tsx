@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion, easeOut } from "framer-motion";
 import { Briefcase, Calendar, MapPin, UserCheck, Users } from "react-feather";
+import { FaGraduationCap } from "react-icons/fa";
 
 const stats = [
   {
@@ -10,7 +11,7 @@ const stats = [
     label: "Future Leaders Impacted",
   },
   {
-    icon: "🎓",
+    icon: <FaGraduationCap size={20} />,
     value: "2,500",
     label: "Alumni Created",
   },
@@ -38,7 +39,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <div className="px-10 pt-17">
+    <div className="px-3 md:px-10 pt-17">
       <motion.section
         className="relative w-full text-left min-h-[calc(100vh-4.25rem)] rounded-2xl overflow-hidden"
         initial={{ opacity: 0 }}
@@ -63,7 +64,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_right,var(--color-black)_0%,var(--primary-800)_15%,var(--primary-700)_30%,var(--primary-600)_45%,rgba(9,47,110,0.8)_100%)]"
+            className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(to_bottom,var(--color-black)_0%,var(--primary-800)_15%,var(--primary-700)_30%,var(--primary-600)_45%,rgba(9,47,110,0.8)_100%)] md:bg-[linear-gradient(to_right,var(--color-black)_0%,var(--primary-800)_15%,var(--primary-700)_30%,var(--primary-600)_45%,rgba(9,47,110,0.8)_100%)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.97 }}
             transition={{ duration: 1.2, ease: easeOut }}
@@ -71,17 +72,18 @@ export default function Hero() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-start justify-center min-h-[calc(100vh-4.25rem)] px-15 text-white">
+        <div className="relative z-10 flex flex-col items-start justify-center min-h-[calc(100vh-4.25rem)] px-5 md:px-15 text-white">
           <motion.h1
-            className="text-2xl md:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
+            className="text-3xl md:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.5 }}
           >
             Nurture and Connect
           </motion.h1>
+
           <motion.h1
-            className="text-2xl md:text-5xl font-medium mt-4 tracking-wide"
+            className="text-3xl md:text-5xl font-medium md:mt-4 tracking-wide"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.6 }}
@@ -118,7 +120,7 @@ export default function Hero() {
                   initial: { scaleX: 0 },
                   hover: { scaleX: 1.1 },
                 }}
-                transition={{ duration: 0.4, ease: 'easeInOut' as const }}
+                transition={{ duration: 0.4, ease: 'easeInOut' }}
                 style={{ originX: 0, willChange: 'transform' }}
                 className="absolute inset-0 bg-linear-to-br from-[#121926] to-[#0A3C8E] -z-10"
               />
@@ -134,18 +136,21 @@ export default function Hero() {
               </motion.span>
             </motion.button>
           </a>
-          <div className="absolute bottom-0 left-0 w-1/2 overflow-hidden rounded-tr-2xl rounded-bl-2xl py-3 bg-white backdrop-blur-sm ">
-            <div className="animate-marquee-text flex gap-5 whitespace-nowrap">
-              {[...stats, ...stats].map((item, i) => (
-                <div key={i} className="flex items-center gap-2 text-[var(--primary-700)] text-md ">
-                  <span >{item.icon}</span>
-                  <span className="font-bold">{item.value}</span>
-                  <span>{item.label}</span>
-                </div>
-              ))}
-            </div>
+        </div>
+
+        {/* Stats */}
+        <div className="absolute bottom-0 left-0 w-full md:w-1/2 overflow-hidden md:rounded-tr-2xl rounded-bl-2xl py-3 bg-white backdrop-blur-sm">
+          <div className="animate-marquee-text flex gap-5 whitespace-nowrap">
+            {[...stats, ...stats].map((item, i) => (
+              <div key={i} className="flex items-center gap-2 text-[var(--primary-700)] text-md">
+                <span>{item.icon}</span>
+                <span className="font-bold">{item.value}</span>
+                <span>{item.label}</span>
+              </div>
+            ))}
           </div>
         </div>
+
       </motion.section>
     </div>
   );
