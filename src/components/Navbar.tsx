@@ -57,7 +57,7 @@ export default function Navbar() {
               onClick={() => handleNavigate("/support")}
               className={`${navLink} ${active === "support" ? activeNav : ""}`}
             >
-              Support
+              Partners
             </button>
 
             <button
@@ -71,7 +71,7 @@ export default function Navbar() {
               onClick={() => handleNavigate("/support")}
               className="hover:scale-110 transition-all duration-200 text-white text-sm tracking-wide relative cursor-pointer bg-gradient-to-br from-[#121926] to-[#0A3C8E] overflow-hidden py-2 px-3 rounded-lg z-0 border border-black"   
             > 
-              Partner with us 
+              Partner with Us 
             </button>
           </div>
 
@@ -144,7 +144,7 @@ export default function Navbar() {
                 onClick={() => handleNavigate("/about")}
                 className="mt-auto w-full tracking-widest text-white text-md bg-gradient-to-br from-[#121926] to-[#0A3C8E] py-3 px-4 rounded-lg"   
               >
-                Partner with us
+                Partner with Us
               </button>
             </div>
           </div>
