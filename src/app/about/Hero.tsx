@@ -5,7 +5,7 @@ import { motion, easeOut } from "framer-motion";
 export default function Hero() {
   return (
     <motion.section
-      className="relative w-full h-[40%] px-6 md:px-16 py-20 md:py-25 text-center rounded-b-2xl overflow-hidden"
+      className="relative w-full h-[40%] px-6 md:px-16 py-20 md:py-15 text-center rounded-b-2xl overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: easeOut }}
@@ -38,18 +38,9 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-3xl mx-auto text-white">
-        
-        <motion.p
-          className="text-sm md:text-base font-light mt-20 md:mt-8 tracking-wide"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: easeOut, delay: 0.3 }}
-        >
-          About us
-        </motion.p>
 
         <motion.h1
-          className="text-2xl md:text-4xl font-medium mt-4 glow-text tracking-wide"
+          className="text-2xl md:text-3xl font-medium mt-15 md:mt-20 glow-text tracking-wide"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: easeOut, delay: 0.5 }}

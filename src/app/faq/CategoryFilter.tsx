@@ -57,14 +57,14 @@ export default function CategoryFilter() {
   const activeLabel = categories.find((c) => c.id === active)?.label;
 
   return (
-    <div className="sticky top-20 z-40 bg-white/80 backdrop-blur-md py-4">
+    <div className="top-20 z-40 bg-white/80 backdrop-blur-md py-4">
       <div className="max-w-4xl mx-auto mt-5 px-6 md:px-0">
         <div className="hidden md:flex gap-3 overflow-x-auto">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => scrollToSection(cat.id)}
-              className={`px-5 py-2 rounded-md text-sm font-normal transition-all whitespace-nowrap tracking-wider
+              className={`px-5 py-2 rounded-md text-sm font-normal transition-all whitespace-nowrap tracking-wider cursor-pointer
                 ${
                   active === cat.id
                     ? "bg-[var(--primary-700)] text-white"
@@ -97,7 +97,7 @@ export default function CategoryFilter() {
                   className={`w-full text-left px-5 py-3 text-sm font-normal tracking-wider transition-colors
                     ${
                       active === cat.id
-                        ? "bg-[var(--primary-700)] text-white"
+                        ? "bg-slate-200"
                         : "text-[var(--neutral-900)] hover:bg-slate-100"
                     }`}
                 >

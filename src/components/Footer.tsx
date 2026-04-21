@@ -35,7 +35,7 @@ export default function Footer() {
               </h5>
             </div>
 
-            <p className="text-sm md:text-base leading-relaxed md:mb-6 font-light text-left tracking-widest">
+            <p className="text-sm md:text-lg max-w-sm leading-relaxed md:mb-6 font-light text-left tracking-widest">
               Home for Indonesia&apos;s future business leaders
             </p>
 
