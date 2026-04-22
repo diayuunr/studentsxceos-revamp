@@ -18,7 +18,7 @@ export default function Partner() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-        <h3 className="md:hidden order-1 text-2xl font-medium text-black tracking-wide text-left -mb-6">
+        <h3 className="md:hidden order-1 text-2xl font-normal text-black tracking-wide text-left -mb-6">
           Partner with Us
         </h3>
 
@@ -54,7 +54,7 @@ export default function Partner() {
             Partner with Us
           </h3>
 
-          <p className="text-gray-600 leading-relaxed font-normal text-md text-[20px] w-6/7">
+          <p className="text-gray-600 leading-relaxed font-normal text-md text-[16px] md:text-[20px] md:w-6/7">
             Partner with StudentsxCEOs to tap into a curated network of ambitious, high-caliber students from top universities across Indonesia.
             Through targeted programs and strategic engagements, we enable you to build early access to future leaders, amplify your brand presence, and create meaningful impact within the next generation of decision-makers.
           </p>

@@ -18,7 +18,7 @@ export default function GetToKnow() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-        <h3 className="md:hidden order-1 text-2xl font-medium text-black tracking-wide text-left -mb-6">
+        <h3 className="md:hidden order-1 text-2xl font-normal text-black tracking-wide text-left -mb-6">
           Get to Know Us
         </h3>
 
@@ -52,7 +52,7 @@ export default function GetToKnow() {
             Get to Know Us
           </h3>
 
-          <p className="text-gray-600 leading-relaxed font-normal text-[20px] w-6/7">
+          <p className="text-gray-600 leading-relaxed font-normal text-[16px] md:text-[20px] md:w-6/7">
             StudentsxCEOs is Indonesia&apos;s strategic leadership accelerator and think-tank, designed with a clear purpose to nurture and connect the nation&apos;s next generation of business leaders.
             We serve as the home for a balanced, connected, and high-performing community, uniting ambitious students who are dedicated to driving Indonesia toward becoming a globally advanced and developed country.
           </p>

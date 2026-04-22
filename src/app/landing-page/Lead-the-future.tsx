@@ -43,13 +43,13 @@ export default function Lead() {
 
         <motion.div
           {...fadeInUp}
-          className="order-3 md:order-2 text-left"
+          className="order-3 md:order-2 text-left ml-10"
         >
           <h3 className="hidden md:block text-2xl md:text-[36px] font-normal mb-3 text-black tracking-wide">
             Lead The Future of Business
           </h3>
 
-          <p className="text-gray-600 leading-relaxed font-normal text-md text-[20px] w-6/7">
+          <p className="text-gray-600 leading-relaxed font-normal text-md text-[16px] md:text-[20px] md:w-6/7">
             StudentsxCEOs operates across multiple cities, connecting you with a curated network of highly driven, high-caliber individuals.
             Each chapter brings together ambitious students and top industry leaders, creating an environment where ideas, opportunities, and leadership grow faster.
           </p>
@@ -96,7 +96,7 @@ export default function Lead() {
         </motion.div>
 
         {/* mobile */}
-        <h3 className="md:hidden order-1 text-2xl font-medium text-black tracking-wide -mb-6">
+        <h3 className="md:hidden order-1 text-2xl font-normal text-black tracking-wide -mb-6">
           Lead The Future of Business
         </h3>
 

@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <div className="px-3 md:px-10 pt-17">
       <motion.section
-        className="relative w-full text-left min-h-[calc(100vh-4.25rem)] rounded-2xl overflow-hidden"
+        className="relative w-full text-left h-[80vh] md:h-[calc(100vh-4.25rem)] rounded-2xl overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: easeOut }}
@@ -72,9 +72,9 @@ export default function Hero() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-start justify-center min-h-[calc(100vh-4.25rem)] px-5 md:px-15 text-white">
+        <div className="relative z-10 flex flex-col items-start justify-center h-[80vh] md:min-h-[calc(100vh-4.25rem)] px-5 md:px-15 text-white">
           <motion.h1
-            className="text-3xl md:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
+            className="text-4xl md:text-5xl font-normal tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.5 }}
@@ -83,7 +83,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.h1
-            className="text-3xl md:text-5xl font-medium md:mt-4 tracking-wide"
+            className="text-4xl md:text-5xl font-normal md:mt-4 tracking-wide"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.6 }}
@@ -92,7 +92,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-sm md:text-xl max-w-xl font-light mt-6 tracking-widest"
+            className="text-[16px] md:text-[18px] max-w-[90%] md:max-w-[30%] font-thin mt-1 tracking-widest"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.8 }}
