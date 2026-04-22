@@ -75,7 +75,7 @@ export default function Community() {
 
                 <div className="relative z-10 w-full h-full flex items-center justify-center mb-2">
                   <Image
-                    src={`/${city.file}`}
+                    src={`/community/${city.file}`}
                     alt={`Community ${city.name}`}
                     fill
                     className="object-contain md:p-4 group-hover:scale-110 transition-transform duration-500 filter saturate-50 drop-shadow-[0_0_12px_rgba(255,255,255,0.4)] opacity-80 group-hover:opacity-100"

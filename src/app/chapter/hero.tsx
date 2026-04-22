@@ -14,7 +14,7 @@ export default function Hero({ title, subtitle, bgImage }: HeroProps) {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[40vh] md:h-[30vh] flex flex-col items-center justify-center overflow-hidden">
+    <section className="relative w-full h-[60vh] md:h-[55vh] flex flex-col items-center justify-center overflow-hidden">
       <Image
         src={bgImage}
         alt={`${title} Background`}
@@ -27,8 +27,8 @@ export default function Hero({ title, subtitle, bgImage }: HeroProps) {
         initial={{ opacity: 0, x: -20 }} 
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        onClick={() => router.push('/landing-page')} 
-        className="absolute top-8 left-4 md:left-8 md:top-10 z-20 flex items-center gap-2 text-white hover:text-gray-300 transition-colors text-sm md:text-base font-medium cursor-pointer"
+        onClick={() => router.push('/community')} 
+        className="absolute top-8 left-4 md:left-8 md:top-25 z-20 flex items-center gap-2 text-white hover:text-gray-300 transition-colors text-sm md:text-base font-medium cursor-pointer"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -44,14 +44,11 @@ export default function Hero({ title, subtitle, bgImage }: HeroProps) {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="relative z-20 text-center px-4 mt-8"
       >
-        <h1 className="text-2xl md:text-3xl font-medium text-white mb-2 tracking-wide glow-text">
-          {title}
+        <h1 className="text-[22px] md:text-[32px] font-normal text-white mb-2 tracking-wide glow-text leading-snug md:leading-normal max-w-[340px] md:max-w-[640px] mx-auto">
+          Nurture and Connect Future Business Leaders in and Around {title}
         </h1>
-        <p className="text-white/90 text-[16px] md:text-[18px] font-light tracking-wider max-w-sm md:max-w-xl mx-auto">
-          {subtitle}
-        </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-6">
+        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-10 md:mt-8 -mb-10">
           
           {/* Instagram 1 */}
           <a href="#" className="flex items-center gap-2 text-white hover:text-gray-200 transition-colors text-sm md:text-base">
