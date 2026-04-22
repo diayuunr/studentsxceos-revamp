@@ -36,7 +36,7 @@ export default function Highlights({ stats, coverageAreas }: HighlightsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-              className="w-[calc(50%-8px)] md:w-55 h-24  md:h-35 bg-linear-to-b from-[#092F6E] to-[#1E517D] rounded-xl p-5 md:p-6 flex flex-col items-start justify-center shadow-sm hover:-translate-y-1 hover:shadow-md transition-all"
+              className="w-[calc(50%-8px)] lg:w-55 h-24  md:h-35 bg-linear-to-b from-[#092F6E] to-[#1E517D] rounded-xl p-5 md:p-6 flex flex-col items-start justify-center shadow-sm hover:-translate-y-1 hover:shadow-md transition-all"
             >
               <span className="text-[18px] md:text-[22px] mb-1.5 font-light text-white/90 tracking-wide">
                 {stat.label}
@@ -55,7 +55,7 @@ export default function Highlights({ stats, coverageAreas }: HighlightsProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: stats.length * 0.1, ease: "easeOut" }}
 
-              className="w-full h-24 md:w-55 md:h-35 bg-linear-to-b from-[#092F6E] to-[#1E517D] rounded-xl p-5 md:p-6 flex flex-col items-start justify-center shadow-sm hover:-translate-y-1 hover:shadow-md transition-all"
+              className="w-full h-24 lg:w-55 md:h-35 bg-linear-to-b from-[#092F6E] to-[#1E517D] rounded-xl p-5 md:p-6 flex flex-col items-start justify-center shadow-sm hover:-translate-y-1 hover:shadow-md transition-all"
             >
               <span className="text-[18px] md:text-[22px] mb-1.5 font-light text-white/90 tracking-wide">
                 Area reach

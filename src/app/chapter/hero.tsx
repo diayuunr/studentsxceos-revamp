@@ -44,7 +44,7 @@ export default function Hero({ title, subtitle, bgImage }: HeroProps) {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="relative z-20 text-center px-4 mt-8"
       >
-        <h1 className="text-[22px] md:text-[32px] font-normal text-white mb-2 tracking-wide glow-text leading-snug md:leading-normal max-w-[340px] md:max-w-[640px] mx-auto">
+        <h1 className="text-[22px] sm:text-[30px] md:text-[32px] font-normal text-white mb-2 tracking-wide glow-text leading-snug md:leading-normal max-w-[340px] md:max-w-[640px] mx-auto">
           Nurture and Connect Future Business Leaders in and Around {title}
         </h1>
 

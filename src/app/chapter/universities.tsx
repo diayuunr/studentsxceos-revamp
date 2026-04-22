@@ -51,7 +51,7 @@ export default function Universities({ data }: UniversitiesProps) {
         ))}
       </div>
 
-      <p className="mt-10 text-[16px] font-normal text-black">and many more...</p>
+      <p className="mt-5 text-[16px] font-normal text-black">and many more...</p>
 
     </section>
   );

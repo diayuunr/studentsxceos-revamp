@@ -45,11 +45,11 @@ export default function Lead() {
           {...fadeInUp}
           className="order-3 md:order-2 text-left"
         >
-          <h3 className="hidden md:block text-2xl md:text-[30px] font-medium mb-3 text-black tracking-wide">
+          <h3 className="hidden md:block text-2xl md:text-[36px] font-normal mb-3 text-black tracking-wide">
             Lead The Future of Business
           </h3>
 
-          <p className="text-gray-600 leading-relaxed font-normal text-md">
+          <p className="text-gray-600 leading-relaxed font-normal text-md text-[20px] w-6/7">
             StudentsxCEOs operates across multiple cities, connecting you with a curated network of highly driven, high-caliber individuals.
             Each chapter brings together ambitious students and top industry leaders, creating an environment where ideas, opportunities, and leadership grow faster.
           </p>
@@ -60,7 +60,7 @@ export default function Lead() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <Link href="/about">
+            <Link href="/community">
               <motion.button
                 initial="initial"
                 whileHover="hover"

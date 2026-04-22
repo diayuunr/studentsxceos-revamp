@@ -74,7 +74,7 @@ export default function ActivityHighlights({ chapterName, images }: ActivityHigh
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <h2 className="text-2xl md:text-[32px] font-medium mb-2 text-slate-900 tracking-wide">
+        <h2 className="text-2xl md:text-[32px] font-normal mb-2 text-slate-900 tracking-wide">
           Activity Highlights
         </h2>
         <p className="text-sm md:text-base font-light text-slate-600 tracking-wide">
@@ -83,7 +83,7 @@ export default function ActivityHighlights({ chapterName, images }: ActivityHigh
       </motion.div>
 
       {/* GALLERY CONTAINER */}
-      <div className="relative w-full max-w-7xl mx-auto h-[450px] md:h-[600px] overflow-hidden rounded-xl">
+      <div className="relative w-full max-w-7xl mx-auto h-[450px] md:h-[600px] overflow-hidden rounded-xl mb-30">
         
         {/*DESKTOP VIEW*/}
         <div className="hidden md:flex w-full gap-4">
