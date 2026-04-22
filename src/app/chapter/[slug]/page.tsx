@@ -1,8 +1,7 @@
 import React from 'react';
 import Hero from '../hero';
-import About from '../about';
+import AboutSection from '../about-section'; // Pastikan path ini sesuai dengan nama file komponen barumu ya
 import Programs from '../programs';
-import Highlights from '../highlights';
 import Universities from '../universities';
 import Contact from '../contact';
 import Footer from '@/components/Footer';
@@ -20,6 +19,7 @@ const chapterData = {
         business leaders.
       </>
     ),
+    coverageAreas: [], // Kosong, jadi kotak list kota tidak akan muncul
     highlights: [
       { label: "Established", value: "2011" },
       { label: "Members", value: "TBA" },
@@ -51,8 +51,6 @@ const chapterData = {
     contactEmail: "yogyakarta@studentsxceos.org",
   },
 
-
-
   'east-java': {
     heroTitle: 'East Java',
     heroSubtitle: 'Nurturing Future Leaders Across East Java',
@@ -61,15 +59,12 @@ const chapterData = {
       <>
         SxC East Java connects ambitious students with industry leaders through
         curated discussions, executive sessions, and strategic initiatives.
-        Operating across key academic hubs in{' '}
-        <strong className="font-medium">
-          Surabaya, Malang, Kediri, Madiun, and Jember
-        </strong>
-        . By uniting diverse academic backgrounds, SxC East Java creates
+        By uniting diverse academic backgrounds, SxC East Java creates
         meaningful opportunities for collaboration, leadership development, and
         networking among future business leaders.
       </>
     ),
+    coverageAreas: ['Surabaya', 'Malang', 'Kediri', 'Madiun', 'Jember'], // Data kota dipindah ke sini
     highlights: [
       { label: "Established", value: "2017" },
       { label: "Members", value: "70+" },
@@ -106,8 +101,6 @@ const chapterData = {
     contactEmail: "eastjava@studentsxceos.org",
   },
 
-
-
   bandung: {
     heroTitle: 'Bandung',
     heroSubtitle: 'Nurturing Future Leaders Across Bandung',
@@ -121,6 +114,7 @@ const chapterData = {
         networking among future business leaders.
       </>
     ),
+    coverageAreas: [],
     highlights: [
       { label: "Established", value: "2015" },
       { label: "Members", value: "40+" },
@@ -162,8 +156,6 @@ const chapterData = {
     contactEmail: "bandung@studentsxceos.org",
   },
 
-
-
   jakarta: {
     heroTitle: 'Jakarta',
     heroSubtitle: 'Nurturing Future Leaders Across Jakarta',
@@ -172,15 +164,12 @@ const chapterData = {
       <>
         SxC Jakarta connects ambitious students with industry leaders through
         curated discussions, executive sessions, and strategic initiatives.
-        Operating across key academic hubs in{' '}
-        <strong className="font-medium">
-          Jakarta, Bogor, Depok, Tanggerang, and Bekasi
-        </strong>
-        . By uniting diverse academic backgrounds, SxC Jakarta creates
+        By uniting diverse academic backgrounds, SxC Jakarta creates
         meaningful opportunities for collaboration, leadership development, and
         networking among future business leaders.
       </>
     ),
+    coverageAreas: ['Jakarta', 'Bogor', 'Depok', 'Tangerang', 'Bekasi'], // Data kota dipindah ke sini juga
     highlights: [
       { label: "Established", value: "2010" },
       { label: "Members", value: "70+" },
@@ -231,7 +220,8 @@ const chapterData = {
     ],
     contactEmail: "jakarta@studentsxceos.org",
   },
-   semarang: {
+  
+  semarang: {
     heroTitle: 'Semarang',
     heroSubtitle: 'Nurturing Future Leaders Across Semarang',
     heroBg: "/places/kota-semarang.png",
@@ -243,6 +233,7 @@ const chapterData = {
         business leaders.
       </>
     ),
+    coverageAreas: [],
     highlights: [
       { label: "Established", value: "2015" },
       { label: "Members", value: "50+" },
@@ -283,11 +274,26 @@ export default async function ChapterPage({
   const { slug } = await params;
   const data = chapterData[slug as keyof typeof chapterData];
 
+  // Tambahan kecil: fallback UI kalau ada yang ngasal masukin slug di URL
+  if (!data) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center">
+        <h1 className="text-2xl font-semibold">Chapter not found</h1>
+      </div>
+    );
+  }
+
   return (
     <main className="w-full flex flex-col items-center overflow-x-hidden">
-      <Hero title={data.heroTitle} subtitle={data.heroSubtitle} bgImage={data.heroBg}/>
-      <About description={data.aboutDescription} />
-      <Highlights stats={data.highlights} />
+      <Hero title={data.heroTitle} subtitle={data.heroSubtitle} bgImage={data.heroBg} />
+      
+      {/* Ini komponen gabungannya yang dipanggil */}
+      <AboutSection 
+        description={data.aboutDescription} 
+        coverageAreas={data.coverageAreas} 
+        highlights={data.highlights} 
+      />
+      
       <Programs data={data.programs} />
       <Universities />
       <Contact email={data.contactEmail} />
