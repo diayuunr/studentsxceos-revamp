@@ -74,7 +74,7 @@ export default function Hero() {
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-start justify-center h-[80vh] md:min-h-[calc(100vh-4.25rem)] px-5 md:px-15 text-white">
           <motion.h1
-            className="text-4xl md:text-5xl font-normal tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
+            className="text-4xl md:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.5 }}
@@ -83,7 +83,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.h1
-            className="text-4xl md:text-5xl font-normal md:mt-4 tracking-wide"
+            className="text-4xl md:text-5xl font-medium md:mt-4 tracking-wide"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.6 }}

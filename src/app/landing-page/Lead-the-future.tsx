@@ -29,7 +29,7 @@ export default function Lead() {
             whileHover={{ scale: 1.04 }}
           >
             <Image
-              src="/chapter-1.png"
+              src="/landing-page-image1.png"
               alt="about"
               fill
               priority
@@ -43,7 +43,7 @@ export default function Lead() {
 
         <motion.div
           {...fadeInUp}
-          className="order-3 md:order-2 text-left ml-10"
+          className="order-3 md:order-2 text-left md:ml-10"
         >
           <h3 className="hidden md:block text-2xl md:text-[36px] font-normal mb-3 text-black tracking-wide">
             Lead The Future of Business

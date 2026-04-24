@@ -33,7 +33,7 @@ export default function GetToKnow() {
             whileHover={{ scale: 1.04 }}
           >
             <Image
-              src="/chapter-1.png"
+              src="/landing-page-image3.png"
               alt="about"
               fill
               priority
@@ -48,7 +48,7 @@ export default function GetToKnow() {
         {/* Text column */}
         <motion.div {...fadeInUp} className="order-3 md:order-1 text-left">
 
-          <h3 className="hidden md:block text-2xl md:text-[36px] font-normal mb-3 text-black tracking-wide">
+          <h3 className="hidden md:block text-2xl md:text-[36px] font-medium mb-3 text-black tracking-wide">
             Get to Know Us
           </h3>
 
