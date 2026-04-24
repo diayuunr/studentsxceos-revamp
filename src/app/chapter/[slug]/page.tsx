@@ -161,7 +161,15 @@ const chapterData = {
       { label: "Established", value: "2015" },
       { label: "Members", value: "50+" },
     ],
-    universities: [], 
+    universities: [
+      { name: 'Universitas Diponegoro', logo: '/universities/undip.png' },
+      { name: 'Universitas Negeri Semarang', logo: '/universities/unnes.jpg' },
+      { name: 'Politeknik Negeri Semarang', logo: '/universities/polines.png' },
+      { name: 'Universitas Dian Nuswantoro', logo: '/universities/udinus.jpg' },
+      { name: 'Universitas Katolik Soegijapranata', logo: '/universities/unika.jpg' },
+      { name: 'Universitas Islam Sultan Agung', logo: '/universities/unissula.png' },
+      { name: 'Binus University', logo: '/universities/logo-binus.png' },
+    ], 
     activityImages: [],
   },
 };

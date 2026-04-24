@@ -8,7 +8,7 @@ export default function CTA() {
     <section className="max-w-full mx-auto px-4 md:px-20 py-12 mb-15">
       <div className="relative rounded-[20px] px-5 py-10 md:p-15 shadow-xl overflow-hidden flex flex-col items-center">
         <Image
-          src="/sxc-mtc-unilever.jpg"
+          src="/heroabout-bg.jpg"
           alt="Background Pattern"
           width={100}
           height={100}
@@ -35,7 +35,7 @@ export default function CTA() {
             there&apos;s a place for you here.
           </p>
 
-          <div className="flex gap-5 mb-8">
+          <div className="flex gap-5">
             <Link href="/community">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -52,7 +52,7 @@ export default function CTA() {
                 whileTap={{ scale: 0.95 }}
                 className="cursor-pointer flex-1 md:flex-none bg-[var(--primary-700)] text-white font-medium py-2 px-4 md:px-6 rounded-lg hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
               >
-                Partner with us
+                Partner with Us
               </motion.button>
             </Link>
           </div>

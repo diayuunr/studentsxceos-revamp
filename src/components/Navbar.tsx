@@ -48,7 +48,7 @@ export default function Navbar() {
 
             <button
               onClick={() => handleNavigate("/community")}
-              className={`${navLink} ${active === "chapters" ? activeNav : ""}`}
+              className={`${navLink} ${active === "community" ? activeNav : ""}`}
             >
               Chapters
             </button>

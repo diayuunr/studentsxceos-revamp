@@ -24,10 +24,10 @@ export default function Universities({ data }: UniversitiesProps) {
         transition={{ duration: 0.6 }}
         className="text-center mb-10 px-4"
       >
-        <h2 className="text-2xl md:text-[32px] font-normal mb-3 tracking-wide text-black">
+        <h2 className="text-2xl md:text-3xl font-medium mb-3 tracking-wide text-black">
           University Reached
         </h2>
-        <p className="text-sm md:text-[18px]  font-normal text-center text-black tracking-wider max-w-2xl mx-auto">
+        <p className="text-sm md:text-base font-light text-center text-black tracking-wide max-w-2xl mx-auto">
           Our alumnus from this chapters are usually from:
         </p>
       </motion.div>

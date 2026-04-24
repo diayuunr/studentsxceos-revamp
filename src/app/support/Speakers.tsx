@@ -53,41 +53,61 @@ export default function Speakers() {
         <motion.div className="grid grid-cols-1 md:grid-cols-4 gap-5 max-w-6xl mx-auto w-full justify-items-center">
 
           <AnimatePresence>
-            {visibleSpeakers.map((speaker, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                transition={{ duration: 0.4 }}
-                layout
-                whileHover={{ scale: 1.05 }}
-                className="border border-[var(--color-neutral-200)] rounded-xl p-4 text-center shadow-sm w-full max-w-[250px] md:max-w-none flex flex-col"
-              >
+            {visibleSpeakers.map((speaker, i) => {
+              const remainder = visibleSpeakers.length % 4;
+              let extraClass = "";
 
-                <div className="relative w-full h-48 overflow-hidden rounded-lg">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-3/4 h-3/4 bg-blue-400/20 blur-2xl rounded-full translate-y-2"></div>
+              if (!isMobile) {
+                if (remainder === 1 && i === visibleSpeakers.length - 1) {
+                  extraClass = "md:col-start-2 md:translate-x-37";
+                }
+                if (remainder === 2 && i === visibleSpeakers.length - 2) {
+                  extraClass = "md:col-start-2";
+                }
+                if (remainder === 3 && i === visibleSpeakers.length - 3) {
+                  extraClass = "md:col-start-2";
+                }
+              }
+
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 20, scale: 0.95 }}
+                  transition={{ duration: 0.4 }}
+                  layout
+                  whileHover={{ scale: 1.05 }}
+                  className={`border border-[var(--color-neutral-200)] rounded-xl p-4 text-center shadow-sm w-full max-w-[250px] md:max-w-none flex flex-col ${extraClass}`}
+                >
+
+                  <div className="relative w-full h-48 overflow-hidden rounded-lg">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-3/4 h-3/4 bg-blue-400/20 blur-2xl rounded-full translate-y-2"></div>
+                    </div>
+
+                    <Image
+                      src={speaker.image}
+                      alt={speaker.title}
+                      className={`z-10 ${speaker.imageClass || "object-cover"}`}
+                      fill
+                    />
                   </div>
 
-                  <Image
-                    src={speaker.image}
-                    alt={speaker.title}
-                    className={`z-10 ${speaker.imageClass || "object-cover"}`}
-                    fill
-                  />
-                </div>
-
-                <div className="border border-[var(--color-neutral-200)] rounded-xl px-5 py-2 text-center shadow-xs mt-auto flex flex-col flex-1 justify-center">
-                  <h2 className="text-sm md:text-base font-medium tracking-wide">
-                    {speaker.title}
-                  </h2>
-                  <p className="text-xs md:text-sm font-normal tracking-wider md:tracking-wide">
-                    {speaker.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="border border-[var(--color-neutral-200)] rounded-xl px-5 py-2 text-center shadow-xs mt-auto flex flex-col flex-1 justify-center">
+                    <h2 className="text-sm md:text-base font-medium tracking-wide">
+                      {speaker.title}
+                    </h2>
+                    <p className="text-xs font-normal tracking-wider md:tracking-wide">
+                      {speaker.description}
+                    </p>
+                    <p className="text-xs font-normal tracking-wider md:tracking-wide">
+                      {speaker.chapter}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
 
         </motion.div>

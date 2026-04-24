@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export default function CTA() {
   return (
-    <section className="max-w-full mx-auto px-4 md:px-20 py-12 mb-15">
+    <section className="max-w-full mx-auto px-4 md:px-20 mb-15">
       <div className="relative rounded-[20px] px-5 py-10 md:p-15 shadow-xl overflow-hidden flex flex-col items-center">
         <Image
-          src="/sxc-mtc-unilever.jpg"
+          src="/heroabout-bg.jpg"
           alt="Background Pattern"
           width={100}
           height={100}
@@ -24,15 +24,15 @@ export default function CTA() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-20 flex flex-col items-center w-full"
         >
-          <h2 className="text-3xl md:text-4xl font-medium text-white mb-8 mt-5 md:mt-0 text-center tracking-wide">
-            Other Ways to Connect
+          <h2 className="text-2xl md:text-4xl font-medium text-white mb-2 mt-5 md:mt-0 text-center tracking-wide">
+            Other Ways to Connect?
           </h2>
 
-          <p className="text-white text-sm md:text-[18px] mb-8 text-center font-normal tracking-wide max-w-2xl">
+          <p className="text-white text-sm md:text-[18px] mb-8 text-center font-normal tracking-wider max-w-2xl px-5">
             Still have questions or want to learn more about our network?
           </p>
 
-          <div className="flex gap-5 mb-8">
+          <div className="flex gap-2 md:gap-5">
             <Link href="/community">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -47,9 +47,18 @@ export default function CTA() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="cursor-pointer flex-1 md:flex-none bg-[var(--primary-700)] text-white font-medium py-2 px-4 md:px-6 rounded-lg hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
+                className="hidden md:block cursor-pointer flex-1 md:flex-none bg-[var(--primary-700)] text-white font-medium py-2 px-4 md:px-6 rounded-lg hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
               >
                 Frequently Asked Questions
+              </motion.button>
+            </Link>
+            <Link href="/faq">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="md:hidden cursor-pointer flex-1 md:flex-none bg-[var(--primary-700)] text-white font-medium py-2 px-8 md:px-6 rounded-lg hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
+              >
+                FAQs
               </motion.button>
             </Link>
           </div>

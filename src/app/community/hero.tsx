@@ -2,13 +2,12 @@
 import Image from 'next/image';
 //import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 export default function Hero() {
   //const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative w-full mx-auto h-100 rounded-b-[20px] overflow-hidden flex flex-col shadow-[0px_6px_30px_rgba(0,0,0,0.4)]">
+    <div className="relative w-full mx-auto h-[40%] py-10 rounded-b-[20px] overflow-hidden flex flex-col shadow-[0px_6px_30px_rgba(0,0,0,0.4)]">
       {/* BACKGROUND LAYER */}
       <div className="absolute inset-0 z-0 bg-[#0A3C8E]">
         <div className="absolute bottom-0 w-full h-[50%] md:top-0 md:right-0 md:h-full md:w-1/2">
@@ -34,7 +33,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut' as const }}
-          className="text-[26px] md:text-[38px] text-white font-medium drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] tracking-wide leading-tight mt-20"
+          className="text-[26px] md:text-4xl text-white font-medium drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] tracking-wide leading-tight mt-20"
         >
           Where Our {' '}
           <span className="hidden md:inline">Community Thrives</span>
@@ -44,7 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: 'easeOut' as const }}
-          className="text-[26px] md:text-[38px] font-medium mt-2 inline-block bg-clip-text bg-[#FCFCFD] drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] text-transparent tracking-wide"
+          className="text-[26px] md:text-4xl font-medium mt-2 inline-block bg-clip-text bg-[#FCFCFD] drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] text-transparent tracking-wide"
         >
          <span className="inline md:hidden">Community Thrives</span>
         </motion.h2>

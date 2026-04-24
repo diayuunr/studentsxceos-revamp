@@ -65,7 +65,7 @@ export default function Partner() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <Link href="/about">
+            <Link href="/support">
               <motion.button
                 initial="initial"
                 whileHover="hover"

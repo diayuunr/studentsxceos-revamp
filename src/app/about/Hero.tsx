@@ -20,11 +20,11 @@ export default function Hero() {
         transition={{ duration: 1.5, ease: easeOut }}
       >
         <Image
-          src="/heroabout-bg.jpg"
+          src="/about-pic0.png"
           alt="Hero"
           fill
           priority
-          className="object-cover object-top !h-full !w-full"
+          className="object-cover object-center !h-full !w-full"
         />
       </motion.div>
 
@@ -40,7 +40,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-3xl mx-auto text-white">
 
         <motion.h1
-          className="text-2xl md:text-3xl font-medium mt-15 md:mt-20 glow-text tracking-wide"
+          className="text-2xl md:text-4xl font-medium mt-15 md:mt-20 glow-text tracking-wide"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: easeOut, delay: 0.5 }}
