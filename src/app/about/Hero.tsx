@@ -20,11 +20,11 @@ export default function Hero() {
         transition={{ duration: 1.5, ease: easeOut }}
       >
         <Image
-          src="/heroabout-bg.jpg"
+          src="/about-pic0.png"
           alt="Hero"
           fill
           priority
-          className="object-cover object-top !h-full !w-full"
+          className="object-cover object-center !h-full !w-full"
         />
       </motion.div>
 
