@@ -52,7 +52,7 @@ export default function CTA() {
                 whileTap={{ scale: 0.95 }}
                 className="cursor-pointer flex-1 md:flex-none bg-[var(--primary-700)] text-white font-medium py-2 px-4 md:px-6 rounded-lg hover:opacity-90 transition shadow-lg text-xs md:text-base whitespace-nowrap"
               >
-                Partner with us
+                Partner with Us
               </motion.button>
             </Link>
           </div>
