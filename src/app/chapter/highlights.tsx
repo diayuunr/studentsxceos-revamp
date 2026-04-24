@@ -21,7 +21,7 @@ export default function Highlights({ stats, coverageAreas }: HighlightsProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-xl md:text-[32px] font-normal tracking-wide text-slate-900 mb-8 md:mb-10"
+          className="text-xl md:text-[32px] font-medium tracking-wide text-slate-900 mb-8 md:mb-10"
         >
           Chapter Highlights
         </motion.h3>
