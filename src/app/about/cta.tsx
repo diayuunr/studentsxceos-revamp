@@ -35,7 +35,7 @@ export default function CTA() {
             there&apos;s a place for you here.
           </p>
 
-          <div className="flex gap-5 mb-8">
+          <div className="flex gap-5">
             <Link href="/community">
               <motion.button
                 whileHover={{ scale: 1.05 }}

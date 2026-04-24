@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function CTA() {
   return (
-    <section className="max-w-full mx-auto px-4 md:px-20 py-12 mb-15">
+    <section className="max-w-full mx-auto px-4 md:px-6 py-12 mb-15">
       <div className="relative rounded-[20px] px-5 py-10 md:p-15 shadow-xl overflow-hidden flex flex-col items-center">
         <Image
           src="/sxc-mtc-unilever.jpg"
@@ -29,7 +29,7 @@ export default function CTA() {
           </h2>
 
           <p className="text-white text-sm md:text-[18px] mb-8 text-center font-normal tracking-wide max-w-2xl">
-            <span className="font-medium">Find answers</span> about jining our community, partnerships, and programs.
+            <span className="font-medium">Find answers</span> about joining our community, partnerships, and programs.
           </p>
 
           <div className="flex gap-5">

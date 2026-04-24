@@ -30,7 +30,7 @@ export default function Community() {
     >
       <div className="max-w-7xl mx-auto">
         <motion.div {...fadeInUp} className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-medium text-slate-900 mb-4 tracking-wide">
+          <h2 className="text-3xl font-medium text-slate-900 mb-4 tracking-wide">
             Explore Our Community
           </h2>
           <p className="text-gray-600 text-sm md:text-base font-normal tracking-wide">

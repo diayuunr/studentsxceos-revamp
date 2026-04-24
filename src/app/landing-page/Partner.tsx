@@ -50,11 +50,11 @@ export default function Partner() {
           {...fadeInUp}
           className="order-3 md:order-1 text-left"
         >
-          <h3 className="hidden md:block text-2xl md:text-[36px] font-medium mb-3 text-black tracking-wide">
+          <h3 className="hidden md:block text-2xl md:text-3xl font-medium mb-3 text-black tracking-wide">
             Partner with Us
           </h3>
 
-          <p className="text-gray-600 leading-relaxed font-normal text-md text-[16px] md:text-[20px] md:w-6/7">
+          <p className="text-gray-600 leading-relaxed font-normal text-md text-[16px] md:text-lg md:w-6/7">
             Partner with StudentsxCEOs to tap into a curated network of ambitious, high-caliber students from top universities across Indonesia.
             Through targeted programs and strategic engagements, we enable you to build early access to future leaders, amplify your brand presence, and create meaningful impact within the next generation of decision-makers.
           </p>
@@ -65,7 +65,7 @@ export default function Partner() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <Link href="/about">
+            <Link href="/support">
               <motion.button
                 initial="initial"
                 whileHover="hover"

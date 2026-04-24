@@ -35,14 +35,14 @@ export default function WhatYouGain() {
         transition={{ duration: 0.8 }}
         className="bg-linear-to-b from-[#121926] to-[#0A3C8E] rounded-xl px-5 py-5 md:p-30 flex flex-col items-center shadow-xl"
       >
-        <h2 className="text-3xl md:text-4xl font-medium text-white mb-10 mt-20 md:mt-0 text-center tracking-wide">
+        <h2 className="text-3xl md:text-3xl font-medium text-white mb-3 mt-20 md:mt-0 text-center tracking-wide">
           What You Gain Through StudentxCEOs
         </h2>
         <p className="text-gray-300 text-sm md:text-[18px] mb-12 text-center font-normal hidden md:block tracking-wide">
           Each chapter develops its own initiatives and programs, under the shared values of SXC.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {cards.map((card, index) => (
             <motion.div 
               key={index}
@@ -70,13 +70,13 @@ export default function WhatYouGain() {
                   </svg>
                 </motion.div>
                 
-                <h4 className="font-medium text-lg text-slate-900 tracking-wide md:text-[22px]">
+                <h4 className="font-medium text-md text-slate-900 tracking-wide md:text-[22px]">
                   {card.title}
                 </h4>
               </div>
               
               <hr className="border-gray-200 mb-4" />
-              <p className="text-[#121926] text-sm md:text-base leading-relaxed font-normal md:mb-8 tracking-wide">
+              <p className="text-[#121926] text-sm md:text-base leading-relaxed font-normal tracking-wide">
                 {card.desc}
               </p>
             </motion.div>

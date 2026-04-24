@@ -48,11 +48,11 @@ export default function GetToKnow() {
         {/* Text column */}
         <motion.div {...fadeInUp} className="order-3 md:order-1 text-left">
 
-          <h3 className="hidden md:block text-2xl md:text-[36px] font-medium mb-3 text-black tracking-wide">
+          <h3 className="hidden md:block text-2xl md:text-3xl font-medium mb-3 text-black tracking-wide">
             Get to Know Us
           </h3>
 
-          <p className="text-gray-600 leading-relaxed font-normal text-[16px] md:text-[20px] md:w-6/7">
+          <p className="text-gray-600 leading-relaxed font-normal text-[16px] md:text-lg md:w-6/7">
             StudentsxCEOs is Indonesia&apos;s strategic leadership accelerator and think-tank, designed with a clear purpose to nurture and connect the nation&apos;s next generation of business leaders.
             We serve as the home for a balanced, connected, and high-performing community, uniting ambitious students who are dedicated to driving Indonesia toward becoming a globally advanced and developed country.
           </p>

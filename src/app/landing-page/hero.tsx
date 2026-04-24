@@ -1,7 +1,8 @@
 'use client';
 import Image from "next/image";
+import Link from "next/link";
 import { motion, easeOut } from "framer-motion";
-import { Briefcase, Calendar, MapPin, UserCheck, Users } from "react-feather";
+import { ArrowUpRight, Briefcase, Calendar, MapPin, UserCheck, Users } from "react-feather";
 import { FaGraduationCap } from "react-icons/fa";
 
 const stats = [
@@ -92,7 +93,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-[16px] md:text-[18px] max-w-[90%] md:max-w-[30%] font-thin mt-1 tracking-widest"
+            className="text-[16px] md:text-[18px] max-w-[90%] md:max-w-lg font-thin mt-4 tracking-widest"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.8 }}
@@ -100,7 +101,7 @@ export default function Hero() {
             Connecting ambitious students with world-class business leaders to shape the future of Indonesia.
           </motion.p>
 
-          <a href="#community">
+          <Link href="/about">
             <motion.button
               initial="initial"
               whileHover="hover"
@@ -132,10 +133,10 @@ export default function Hero() {
                 }}
                 className="relative z-10 font-medium"
               >
-                Join our community
+                Learn More <ArrowUpRight size={20} className="inline-block ml-1 mb-1" />
               </motion.span>
             </motion.button>
-          </a>
+          </Link>
         </div>
 
         {/* Stats */}

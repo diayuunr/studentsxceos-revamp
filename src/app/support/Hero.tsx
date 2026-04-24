@@ -20,7 +20,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }}
           animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-2xl md:text-3xl font-medium mt-15 md:mt-20 glow-text tracking-wide"
+          className="text-2xl md:text-4xl font-medium mt-15 md:mt-20 glow-text tracking-wide"
         >
           Support Our Mission
         </motion.h1>
