@@ -46,7 +46,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: easeOut }}
       >
-        {/* Hero Image (TETAP SAMA) */}
+        {/* Hero Image */}
         <div className="absolute top-0 left-[-5rem] w-[calc(100%+5rem)] h-full overflow-hidden">
           <motion.div
             className="relative w-full h-full overflow-hidden"
@@ -71,7 +71,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* Hero Content (TETAP SAMA) */}
+        {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-start justify-center h-[80vh] md:min-h-[calc(100vh-4.25rem)] px-5 md:px-15 text-white">
           <motion.h1
             className="text-4xl md:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
@@ -141,6 +141,8 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 flex items-end w-full md:w-1/2">
 
           <div className="hidden md:block absolute left-0 bottom-[calc(100%-1px)] w-3 h-3 bg-[radial-gradient(circle_at_top_right,transparent_12px,#ffffff_12.5px)] z-10 shrink-0"></div>
+
+          <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-white z-0"></div>
 
           <div className="w-full overflow-hidden md:rounded-tr-[12px] rounded-none py-3 bg-white z-10 shrink-0">
             <div className="animate-marquee-text flex gap-5 whitespace-nowrap pl-4">
