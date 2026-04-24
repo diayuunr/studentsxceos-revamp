@@ -5,6 +5,7 @@ import Fellowship from "./Fellowship";
 import Partnerships from "./Partnerships";
 import CategoryFilter from "./CategoryFilter";
 import Footer from "@/components/Footer";
+import CTA from "./cta";
 
 export default function FAQ() {
   return (
@@ -15,6 +16,7 @@ export default function FAQ() {
       <Vision />
       <Fellowship />
       <Partnerships />
+      <CTA />
       <Footer />
     </main>
   );

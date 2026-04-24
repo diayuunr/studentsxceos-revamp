@@ -74,7 +74,7 @@ export default function ActivityHighlights({ chapterName, images }: ActivityHigh
         transition={{ duration: 0.6 }}
         className="text-center mb-10"
       >
-        <h2 className="text-2xl md:text-[32px] font-normal mb-2 text-slate-900 tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-medium mb-2 text-slate-900 tracking-wide">
           Activity Highlights
         </h2>
         <p className="text-sm md:text-base font-light text-slate-600 tracking-wide">
