@@ -8,7 +8,7 @@ export default function CTA() {
     <section className="max-w-full mx-auto px-4 md:px-6 py-12 mb-15">
       <div className="relative rounded-[20px] px-5 py-10 md:p-15 shadow-xl overflow-hidden flex flex-col items-center">
         <Image
-          src="/sxc-mtc-unilever.jpg"
+          src="/heroabout-bg.jpg"
           alt="Background Pattern"
           width={100}
           height={100}

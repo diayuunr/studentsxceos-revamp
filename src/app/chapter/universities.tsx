@@ -27,7 +27,7 @@ export default function Universities({ data }: UniversitiesProps) {
         <h2 className="text-2xl md:text-3xl font-medium mb-3 tracking-wide text-black">
           University Reached
         </h2>
-        <p className="text-sm md:text-[18px]  font-normal text-center text-black tracking-wider max-w-2xl mx-auto">
+        <p className="text-sm md:text-base font-light text-center text-black tracking-wide max-w-2xl mx-auto">
           Our alumnus from this chapters are usually from:
         </p>
       </motion.div>

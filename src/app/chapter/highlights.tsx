@@ -60,7 +60,7 @@ export default function Highlights({ stats, coverageAreas }: HighlightsProps) {
               <span className="text-[18px] md:text-[22px] mb-1.5 font-medium text-white/90 tracking-wide">
                 Area reach
               </span>
-              <span className="text-[13.5px] md:text-[18px] font-light text-white/95 leading-relaxed tracking-wide">
+              <span className="text-[13.5px] md:text-lg font-light text-white/95 leading-relaxed tracking-wide">
                 {coverageAreas.join(', ')}
               </span>
             </motion.div>
