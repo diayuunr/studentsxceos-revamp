@@ -45,7 +45,7 @@ export default function Lead() {
           {...fadeInUp}
           className="order-3 md:order-2 text-left md:ml-10"
         >
-          <h3 className="hidden md:block text-2xl md:text-[36px] font-normal mb-3 text-black tracking-wide">
+          <h3 className="hidden md:block text-2xl md:text-[36px] font-medium mb-3 text-black tracking-wide">
             Lead The Future of Business
           </h3>
 
