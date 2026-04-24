@@ -1,8 +1,7 @@
 'use client';
 import Image from "next/image";
-import Link from "next/link";
 import { motion, easeOut } from "framer-motion";
-import { ArrowUpRight, Briefcase, Calendar, MapPin, UserCheck, Users } from "react-feather";
+import { Briefcase, Calendar, MapPin, UserCheck, Users } from "react-feather";
 import { FaGraduationCap } from "react-icons/fa";
 
 const stats = [
@@ -47,7 +46,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: easeOut }}
       >
-        {/* Hero Image */}
+        {/* Hero Image (TETAP SAMA) */}
         <div className="absolute top-0 left-[-5rem] w-[calc(100%+5rem)] h-full overflow-hidden">
           <motion.div
             className="relative w-full h-full overflow-hidden"
@@ -72,7 +71,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* Hero Content */}
+        {/* Hero Content (TETAP SAMA) */}
         <div className="relative z-10 flex flex-col items-start justify-center h-[80vh] md:min-h-[calc(100vh-4.25rem)] px-5 md:px-15 text-white">
           <motion.h1
             className="text-4xl md:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[var(--secondary-200)] to-[var(--color-white)]"
@@ -93,7 +92,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-[16px] md:text-[18px] max-w-[90%] md:max-w-lg font-thin mt-4 tracking-widest"
+            className="text-[16px] md:text-[18px] max-w-[90%] md:max-w-[30%] font-thin mt-1 tracking-widest"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easeOut, delay: 0.8 }}
@@ -101,7 +100,7 @@ export default function Hero() {
             Connecting ambitious students with world-class business leaders to shape the future of Indonesia.
           </motion.p>
 
-          <Link href="/about">
+          <a href="#community">
             <motion.button
               initial="initial"
               whileHover="hover"
@@ -133,23 +132,30 @@ export default function Hero() {
                 }}
                 className="relative z-10 font-medium"
               >
-                Learn More <ArrowUpRight size={20} className="inline-block ml-1 mb-1" />
+                Join our community
               </motion.span>
             </motion.button>
-          </Link>
+          </a>
         </div>
 
-        {/* Stats */}
-        <div className="absolute bottom-0 left-0 w-full md:w-1/2 overflow-hidden md:rounded-tr-2xl rounded-bl-2xl py-3 bg-white backdrop-blur-sm">
-          <div className="animate-marquee-text flex gap-5 whitespace-nowrap">
-            {[...stats, ...stats].map((item, i) => (
-              <div key={i} className="flex items-center gap-2 text-[var(--primary-700)] text-md">
-                <span>{item.icon}</span>
-                <span className="font-bold">{item.value}</span>
-                <span>{item.label}</span>
-              </div>
-            ))}
+        <div className="absolute bottom-0 left-0 flex items-end w-full md:w-1/2">
+
+          <div className="hidden md:block absolute left-0 bottom-[calc(100%-1px)] w-3 h-3 bg-[radial-gradient(circle_at_top_right,transparent_12px,#ffffff_12.5px)] z-10 shrink-0"></div>
+
+          <div className="w-full overflow-hidden md:rounded-tr-[12px] rounded-none py-3 bg-white z-10 shrink-0">
+            <div className="animate-marquee-text flex gap-5 whitespace-nowrap pl-4">
+              {[...stats, ...stats].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 text-[var(--primary-700)] text-md">
+                  <span>{item.icon}</span>
+                  <span className="font-bold text-slate-900">{item.value}</span>
+                  <span className="text-slate-800">{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
+
+          <div className="hidden md:block w-3 h-3 bg-[radial-gradient(circle_at_top_right,transparent_12px,#ffffff_12.5px)] shrink-0 -ml-[1px]"></div>
+
         </div>
 
       </motion.section>
