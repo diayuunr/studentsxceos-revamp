@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed w-full z-50 transition-shadow">
-      <div className="top-0 left-0 right-0 w-full mx-auto rounded-b-xl bg-[var(--color-white)] px-8 md:px-16 py-3 shadow-sm">
+      <div className="top-0 left-0 right-0 w-full mx-auto rounded-b-xl bg-[var(--color-white)] px-8 md:px-11 py-3 shadow-sm">
         
         <div className="relative flex items-center justify-between">
 
@@ -120,8 +120,8 @@ export default function Navbar() {
                   About
                 </button>
                 <button 
-                  onClick={() => handleNavigate("/chapters")}
-                  className={`text-left ${active === "chapters" ? "text-[var(--primary-600)] font-medium" : "text-[var(--neutral-700)]"}`}
+                  onClick={() => handleNavigate("/community")}
+                  className={`text-left ${active === "community" ? "text-[var(--primary-600)] font-medium" : "text-[var(--neutral-700)]"}`}
                 >
                   Chapters
                 </button>
@@ -141,7 +141,7 @@ export default function Navbar() {
 
               {/* Partner Button */}
               <button
-                onClick={() => handleNavigate("/about")}
+                onClick={() => handleNavigate("/support")}
                 className="mt-auto w-full tracking-widest text-white text-md bg-gradient-to-br from-[#121926] to-[#0A3C8E] py-3 px-4 rounded-lg"   
               >
                 Partner with Us

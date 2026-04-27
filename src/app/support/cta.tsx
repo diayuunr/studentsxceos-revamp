@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function CTA() {
   return (
-    <section className="max-w-full mx-auto px-4 md:px-20 mb-15">
+    <section className="max-w-full mx-auto px-4 md:px-15 mb-15">
       <div className="relative rounded-[20px] px-5 py-10 md:p-15 shadow-xl overflow-hidden flex flex-col items-center">
         <Image
           src="/heroabout-bg.jpg"
